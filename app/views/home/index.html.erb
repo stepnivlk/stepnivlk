@@ -1,0 +1,143 @@
+
+
+
+
+
+      <!-- Services start -->
+
+  <section id="services" class="pfblock pfblock-gray">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3">
+
+          <div class="pfblock-header wow fadeInUp">
+            <h2 class="pfblock-title">Tímto se zabývám</h2>
+            <div class="pfblock-line"></div>
+            <div class="pfblock-subtitle">
+              sub
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-3">
+
+          <div class="iconbox wow slideInLeft">
+            <div class="iconbox-icon">
+              <span class="icon-magic-wand"></span>
+            </div>
+            <div class="iconbox-text">
+              <h3 class="iconbox-title">Webové Aplikace</h3>
+              <div class="iconbox-desc">
+                Literally synth Banksy art party. Post-ironic try-hard Kickstarter street art artisan, typewriter skateboard High Life quinoa freegan beard four loko health goth put a bird on it fap. Wolf street art kale chips, chia pork belly kogi taxidermy flexitarian. 
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="iconbox wow slideInLeft">
+            <div class="iconbox-icon">
+              <span class="icon-puzzle"></span>
+            </div>
+            <div class="iconbox-text">
+              <h3 class="iconbox-title">Web Design</h3>
+              <div class="iconbox-desc">
+                Authentic DIY tofu, street art ugh retro tattooed swag. Typewriter post-ironic 8-bit hoodie, cray photo booth fanny pack fixie tilde. Trust fund master cleanse blog, Godard mixtape swag direct trade ugh migas tilde slow-carb Thundercats meggings.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="iconbox wow slideInRight">
+            <div class="iconbox-icon">
+              <span class="icon-badge"></span>
+            </div>
+            <div class="iconbox-text">
+              <h3 class="iconbox-title">Správa serverů</h3>
+              <div class="iconbox-desc">
+                Odd Future stumptown bitters pour-over ugh slow-carb four loko, post-ironic seitan roof party scenester tattooed artisan. Next level single-origin coffee slow-carb PBR, lo-fi tousled trust fund art party Kickstarter leggings. 
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="iconbox wow slideInRight">
+            <div class="iconbox-icon">
+              <span class="icon-question"></span>
+            </div>
+            <div class="iconbox-text">
+              <h3 class="iconbox-title">Programování</h3>
+              <div class="iconbox-desc">
+                 Tattooed Williamsburg distillery, kogi umami heirloom keffiyeh Godard. Flannel listicle Pitchfork cred, synth 3 wolf moon small batch food truck keffiyeh blog.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <!-- Services end -->
+
+
+   <section id="about" class="pfblock">
+    <div class="container">
+      <div class="row">
+
+                <div class="col-sm-6 col-sm-offset-3">
+
+          <div class="pfblock-header wow fadeInUp">
+            <h2 class="pfblock-title">O mně</h2>
+            <div class="pfblock-line"></div>
+            <div class="pfblock-subtitle">
+              sub
+            </div>
+          </div>
+          <% @posts.each do |post| %>
+            <h3><%= link_to post.title, post_path(post), class: "post_title" %></h3>
+            <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+          <% end %>
+        </div>
+
+
+            </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+
+     <section id="contact" class="pfblock pfblock-gray">
+    <div class="container">
+      <div class="row">
+
+                <div class="col-sm-6 col-sm-offset-3">
+
+          <div class="pfblock-header wow fadeInUp">
+            <h2 class="pfblock-title">Kontakt</h2>
+            <div class="pfblock-line"></div>
+            <div class="pfblock-subtitle">
+              sub
+            </div>
+          </div>
+
+        </div>
+
+
+            </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
