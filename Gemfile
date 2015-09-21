@@ -21,7 +21,6 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-smooth-scroll-rails'
 gem 'sticky-rails'
-gem 'jquery-smooth-scroll-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -34,6 +33,11 @@ gem "font-awesome-rails"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'pygments.rb'
+gem 'redcarpet'
+gem 'paperclip'
+gem 'paperclip-meta'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

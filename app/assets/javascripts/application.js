@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.sticky.js
-//= require turbolinks
 //= require_tree .
 $(document).ready(function() {
         $('a[href*=#]').bind("click", function(e){

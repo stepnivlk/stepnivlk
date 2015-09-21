@@ -1,8 +1,26 @@
-<%= @post.title %><br>
-<%= @post.content %>
+  <section id="services" class="pfblock pfblock-gray">
+    <div class="container">
+      <div class="row">
 
-<br>
-<br>
+        <div class="col-sm-8 col-sm-offset-2">
 
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure ?"} %>
+          <div class="pfblock-header wow fadeInUp">
+            <h2 class="pfblock-title"><%= @post.title %><br></h2>
+            <div class="pfblock-line"></div>
+          </div>
+          <%= markdown @post.content %>
+          <%= link_to "Edit", edit_post_path(@post) %> |
+          <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure ?"} %>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+</div>
+</section>

@@ -1,12 +1,30 @@
-<h1>Posts</h1>
+  <section id="services" class="pfblock pfblock-gray">
+    <div class="container">
+      <div class="row">
 
-<ul id="posts">
-  <% @posts.each do |post| %>
-    <li>
-      <%= link_to post.title, post_path(post), class: "post_title" %>
-    </li>
-  <% end %>
-</ul>
+        <div class="col-sm-6 col-sm-offset-3">
 
-<%= link_to "Create a New Post", new_post_path, class: "new_post" %>
+          <div class="pfblock-header wow fadeInUp">
+            <h2 class="pfblock-title">Posts</h2>
+            <div class="pfblock-line"></div>
+            <div class="pfblock-subtitle">
+              sub
+            </div>
+          </div>
 
+        </div>
+
+      </div>
+      <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+
+          <% @posts.each do |post| %>
+            <h3><%= link_to post.title, post_path(post), class: "post_title" %></h3>
+            <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+          <% end %>
+          <%= link_to "Create a New Post", new_post_path, class: "new_post" %>
+          </div>
+      </div>
+
+</div>
+</section>
