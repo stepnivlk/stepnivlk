@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150917124332) do
+ActiveRecord::Schema.define(version: 20150921134838) do
+
+  create_table "galleries", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "cover"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "name"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.text     "file_meta"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "gallery_id"
+  end
+
+  add_index "images", ["gallery_id"], name: "index_images_on_gallery_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"

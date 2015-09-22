@@ -1,5 +1,13 @@
-  <section id="services" class="pfblock pfblock-gray">
+  <section id="services" class="pfblock-gray">
     <div class="container">
+      <div class="row">
+      <div class="text-center">
+    <ol class="breadcrumb">
+  <li><strong><%= link_to "~", root_path %></strong></li>
+  <li class="active">Blog</li>
+</ol>
+</div>
+</div>
       <div class="row">
 
         <div class="col-sm-6 col-sm-offset-3">
@@ -20,6 +28,7 @@
 
           <% @posts.each do |post| %>
             <h3><%= link_to post.title, post_path(post), class: "post_title" %></h3>
+            <%= markdown post.content.truncate(200) %>
             <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
           <% end %>
           <%= link_to "Create a New Post", new_post_path, class: "new_post" %>

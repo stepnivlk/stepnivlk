@@ -1,0 +1,45 @@
+<section id="services" class="pfblock-gray">
+  <div class="container">
+        <div class="row">
+      <div class="text-center">
+    <ol class="breadcrumb">
+  <li><strong><%= link_to "~", root_path %></strong></li>
+  <li><%= link_to @gallery_name, gallery_path(@image.gallery_id) %></li>
+  <li class="active"><%= @image.id %></li>
+</ol>
+</div>
+</div>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="iconbox wow slideInLeft">
+
+          <div class="row text-center">
+            <div class="col-sm-2 text-left">
+              <strong><%= link_to fa_icon("chevron-left 2x"), gallery_image_path(@image.gallery_id, @image.prev) if @image.prev %></strong>
+            </div>
+            <div class="col-sm-8 iconbox-title">
+              <h4 class=""><%= @image.file_file_name %> </h4> 
+              <%= link_to fa_icon("wrench"), edit_gallery_image_path(@image.gallery_id, @image) %> |
+              <%= link_to fa_icon("remove"), gallery_image_path(@image.gallery_id, @image), method: :delete, data: { confirm: "Are you sure ?"} %> 
+            </div>
+            <div class="col-sm-2 text-right">
+              <strong><%= link_to fa_icon("chevron-right 2x"), gallery_image_path(@image.gallery_id, @image.next) if @image.next %></strong>
+            </div>
+          </div>
+
+          <% if @image.next %>
+            <%= link_to image_tag(@image.file.url(:original)), gallery_image_path(@image.gallery_id, @image.next) %>
+          <% else %>
+            <%= image_tag(@image.file.url(:original)) %>
+          <% end %>
+
+          <div class="row text-center top-spacer">
+                  <%= link_to 'Back', gallery_path(@image.gallery_id), class: "text-right" %>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,12 +1,37 @@
 module ApplicationHelper
-  class HTMLwithPygments < Redcarpet::Render::HTML
+  class HTMLblocks < Redcarpet::Render::HTML
+
+    include Sprockets::Rails::Helper
+    include ActionView::Helpers::UrlHelper
+
     def block_code(code, language)
       Pygments.highlight(code, lexer: language)
+    end
+
+    def parse_media_link(link)
+      matches = link.match(/^([\w\d\.]+)(?:\|(\w+))?(?:\|([\w\s\d]+))?$/)
+      { :id => matches[1], :size => (matches[2] || 'original').to_sym, :class => matches[3] } if matches
+    end
+
+    def image(link, title, alt_text)
+      size = nil
+      css_class = nil
+
+      unless (parse = parse_media_link(link)) == nil
+        media = Image.find_by_id(parse[:id]) || Image.find_by_name(parse[:id])
+        if media
+          size = media.file.image_size(parse[:size])
+          link = media.file.url(parse[:size])
+          css_class = parse[:class]
+        end
+      end
+
+      image_tag(link, size: size, title: title, alt: alt_text, class: css_class)
     end
   end
 
   def markdown(content)
-    renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
+    renderer = HTMLblocks.new(hard_wrap: true, filter_html: true)
     options = {
       autolink: true,
       no_intra_emphasis: true,

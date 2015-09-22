@@ -1,0 +1,29 @@
+  <section id="services" class="pfblock pfblock-gray">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3">
+
+          <div class="pfblock-header wow fadeInUp">
+            <h2 class="pfblock-title">Images</h2>
+            <div class="pfblock-line"></div>
+            <div class="pfblock-subtitle">
+              sub
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+
+          <% @images.each do |image| %>
+            <h3><%= link_to image.name, image_path(image), class: "image_title" %></h3>
+          <% end %>
+          <%= link_to "Create a New Image", new_image_path, class: "new_image" %>
+          </div>
+      </div>
+
+</div>
+</section>
