@@ -273,9 +273,17 @@ a,
 .iconbox {
   background: #fff;
   border-bottom: 1px solid #d4d4d4;
+
   text-align: left;
   padding: 20px 20px;
   margin: 0 0 20px;
+}
+
+.infobox {
+  border: 0;
+  color: $gray-darker;
+  background: $gray-lighter;
+  min-height: 360px;
 }
 
 .iconbox-icon {

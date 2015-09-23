@@ -30,7 +30,7 @@
 
         <div class="col-sm-3">
 
-          <div class="iconbox wow slideInLeft">
+          <div class="iconbox infobox wow slideInLeft">
             <div class="iconbox-icon text-center">
               <%= fa_icon "database" %>
             </div>
@@ -44,27 +44,13 @@
 
         </div>
 
-        <div class="col-sm-3">
 
-          <div class="iconbox wow slideInLeft">
-            <div class="iconbox-icon text-center">
-              <%= fa_icon "book" %>
-            </div>
-            <div class="iconbox-text">
-              <h3 class="iconbox-title text-center">Web Design</h3>
-              <div class="iconbox-desc">
-                Authentic DIY tofu, street art ugh retro tattooed swag. Typewriter post-ironic 8-bit hoodie, cray photo booth fanny pack fixie tilde. Trust fund master cleanse blog, Godard mixtape swag direct trade ugh migas tilde slow-carb Thundercats meggings.
-              </div>
-            </div>
-          </div>
-
-        </div>
 
         <div class="col-sm-3">
 
-          <div class="iconbox wow slideInRight">
+          <div class="iconbox infobox wow slideInRight">
             <div class="iconbox-icon text-center">
-              <%= fa_icon "calculator" %>
+              <%= fa_icon "server" %>
             </div>
             <div class="iconbox-text">
               <h3 class="iconbox-title text-center">Správa serverů</h3>
@@ -78,14 +64,30 @@
 
         <div class="col-sm-3">
 
-          <div class="iconbox wow slideInRight">
+          <div class="iconbox infobox wow slideInRight">
             <div class="iconbox-icon text-center">
-              <%= fa_icon "cog" %>
+              <%= fa_icon "keyboard-o" %>
             </div>
             <div class="iconbox-text">
               <h3 class="iconbox-title text-center">Programování</h3>
               <div class="iconbox-desc">
                  Tattooed Williamsburg distillery, kogi umami heirloom keffiyeh Godard. Flannel listicle Pitchfork cred, synth 3 wolf moon small batch food truck keffiyeh blog.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="iconbox infobox wow slideInLeft">
+            <div class="iconbox-icon text-center">
+              <%= fa_icon "photo" %>
+            </div>
+            <div class="iconbox-text">
+              <h3 class="iconbox-title text-center">Grafika</h3>
+              <div class="iconbox-desc">
+                Authentic DIY tofu, street art ugh retro tattooed swag. Typewriter post-ironic 8-bit hoodie, cray photo booth fanny pack fixie tilde. Trust fund master cleanse blog, Godard mixtape swag direct trade ugh migas tilde slow-carb Thundercats meggings.
               </div>
             </div>
           </div>
@@ -103,12 +105,17 @@
     <div class="container">
       <div class="row">
 
-                <div class="col-sm-6 col-sm-offset-3">
-          <% @posts.each do |post| %>
-            <h3><%= link_to post.title, post_path(post), class: "post_title" %></h3>
-            <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+          <% @stream.each do |post| %>
+          <div class="col-sm-3">
+            <div class="iconbox">
+              <% if post.identity == "post" %>
+                <h4><%= post.title %></h4>
+                <p><%= post.content.truncate(120) %>
+              <% end %>
+              <p><%= post %></p>
+            </div>
+            </div>
           <% end %>
-        </div>
 
 
             </div><!-- .row -->
