@@ -18,9 +18,10 @@
 
         <div class="collapse navbar-collapse" id="custom-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Domů", root_path %></li>
-            <li class="<%= "active" if current_page?(posts_path) %>"><%= link_to "Blog", posts_path %></li>
-            <li class="<%= "active" if current_page?(galleries_path) %>"><%= link_to "Galerie", galleries_path %></li>
+            <%= content_tag :li, link_to("Domů", root_path), class: ("active" if current_page?(root_path))  %>
+            <%= content_tag :li, link_to("Blog", posts_path), class: ("active" if current_page?(posts_path))  %>
+            <%= content_tag :li, link_to("Galerie", galleries_path), class: ("active" if current_page?(galleries_path))  %>
+     
 
             <li><a href="#contact">Kontakt</a></li>
 

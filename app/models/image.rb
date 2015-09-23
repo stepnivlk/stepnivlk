@@ -1,9 +1,12 @@
 class Image < ActiveRecord::Base
+  include Tags
+
   belongs_to :gallery
+
   has_attached_file :file, styles: { original: "1200x1200>", medium: "600>x600", thumb: "x200>" }
   validates_attachment :file, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
-    def prev
+  def prev
     prev_item = Image.where("id < ?", id).last
     return prev_item if prev_item && prev_item.gallery_id == gallery_id
   end

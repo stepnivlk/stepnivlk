@@ -5,6 +5,8 @@ body {
   font: 300 14px/1.8 'Raleway', sans-serif;
   color: #666;
   overflow-x: hidden;
+  background: $gray-lighter;
+
 }
 
 img {
@@ -19,6 +21,11 @@ a {
 a:hover {
   text-decoration: none;
   color: #999;
+}
+
+.breadcrumb {
+  background: $gray-lighter;
+
 }
 
 #home {
@@ -107,7 +114,7 @@ a:hover {
 }
 
 .pfblock-gray {
-  background: #f5f5f5;
+  background: $gray-lighter;
 }
 
 .pfblock-header {
@@ -241,6 +248,25 @@ a,
 
 .btn-default {
   border-radius: 0;
+  border: 0;
+  padding: 2px 12px 2px 12px;
+  background-color: $gray-lighter;
+  font-size: 14px;
+  &:hover {
+    background-color: #E7746F;
+    color: #fff;
+  }
+}
+
+.btn-tag-delete {
+  color: $gray-light;
+  padding: 2px 4px 2px 4px;
+  border-left: 1px solid #fff;
+  font-size: 14px;
+  &:hover {
+    border-left: 1px solid #fff;
+  }
+
 }
 
 

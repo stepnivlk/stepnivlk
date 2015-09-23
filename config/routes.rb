@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'tags/index'
+
+  get 'tags/show'
+
+  get 'tags/destroy'
+
   root 'home#index'
 
   resources :posts
@@ -8,6 +14,9 @@ Rails.application.routes.draw do
   resources :galleries do 
     resources :images
   end
+
+  resources :tags
+  
   get 'home/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

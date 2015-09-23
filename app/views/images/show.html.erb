@@ -28,11 +28,31 @@
             </div>
           </div>
 
+                    <div class="row ">
+          <div class="col-sm-12">
+
           <% if @image.next %>
             <%= link_to image_tag(@image.file.url(:original)), gallery_image_path(@image.gallery_id, @image.next) %>
           <% else %>
             <%= image_tag(@image.file.url(:original)) %>
           <% end %>
+          </div>
+          </div>
+
+          <!-- tags -->
+          <div class="row ">
+          <div class="col-sm-12">
+          <br>
+          <%= fa_icon "tags" if @image.tags.any? %>
+          <% @image.tags.each do |tag| %>
+            <div class="btn-group" role="group" aria-label="...">
+              <%= link_to tag.name, tag_path(tag), class: "tag btn btn-default" %>
+              <%= link_to fa_icon("remove"), tag_path(tag), class: "tag btn btn-default btn-tag-delete", method: :delete, data: {confirm: "Really delete the tag?"} %>
+          </div>
+
+          <% end %>
+          </div>
+          </div>
 
         </div>
       </div>
