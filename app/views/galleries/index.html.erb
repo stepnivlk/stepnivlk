@@ -1,13 +1,15 @@
 <section class=" pfblock-gray">
   <div class="container">
-        <div class="row">
+
+    <div class="row">
       <div class="text-center">
-    <ol class="breadcrumb">
-  <li><strong><%= link_to "~", root_path %></strong></li>
-  <li class="active">Galerie</li>
-</ol>
-</div>
-</div>
+        <ol class="breadcrumb">
+          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li class="active">Galerie</li>
+        </ol>
+      </div>
+    </div>
+    
     <% @galleries.each do |gallery| %>
       <div class="gallery-wrap">
 

@@ -1,18 +1,41 @@
-  <section id="services" class="pfblock pfblock-gray">
+  <section id="services" class="pfblock-gray">
     <div class="container">
       <div class="row">
+        <div class="text-center">
+          <ol class="breadcrumb">
+            <li><strong><%= link_to "~", root_path %></strong></li>
+            <li><%= link_to "Blog", posts_path %></li>
+            <li class="active"><%= @post.id %></li>
+          </ol>
+        </div>
+      </div>
 
-        <div class="col-sm-8 col-sm-offset-2">
 
+      <div class="row">
+
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="iconbox">
           <div class="pfblock-header wow fadeInUp">
-            <h2 class="pfblock-title"><%= @post.title %><br></h2>
+            <h3 class="pfblock-title"><%= @post.title %><br></h3>
             <div class="pfblock-line"></div>
           </div>
           <%= markdown @post.content %>
-          <%= link_to "Edit", edit_post_path(@post) %> |
-          <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure ?"} %>
+          <p class="date"><%= @post.created_at.strftime("%d/%m/%Y") %></p>
+          <%= link_to fa_icon("wrench"), edit_post_path(@post) %> |
+          <%= link_to fa_icon("remove"), post_path(@post), method: :delete, data: { confirm: "Are you sure ?"} %>
         </div>
+        </div>
+      </div>
+      <div class="row">
 
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="iconbox">
+          <div class="pfblock-header wow fadeInUp">
+            <h3 class="pfblock-title">Komentáře<br></h3>
+            <div class="pfblock-line"></div>
+          </div>
+        </div>
+        </div>
       </div>
 
 

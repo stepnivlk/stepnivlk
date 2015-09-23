@@ -327,3 +327,18 @@ h4 {
   background-color: #E7746F;
 
 }
+
+blockquote {
+  border: none;
+  margin: 0;
+}
+
+.date {
+  color: $gray-light;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

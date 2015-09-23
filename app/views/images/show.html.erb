@@ -4,6 +4,7 @@
       <div class="text-center">
     <ol class="breadcrumb">
   <li><strong><%= link_to "~", root_path %></strong></li>
+  <li><%= link_to "Galerie", galleries_path %></li>
   <li><%= link_to @gallery_name, gallery_path(@image.gallery_id) %></li>
   <li class="active"><%= @image.id %></li>
 </ol>
@@ -32,11 +33,6 @@
           <% else %>
             <%= image_tag(@image.file.url(:original)) %>
           <% end %>
-
-          <div class="row text-center top-spacer">
-                  <%= link_to 'Back', gallery_path(@image.gallery_id), class: "text-right" %>
-
-          </div>
 
         </div>
       </div>
