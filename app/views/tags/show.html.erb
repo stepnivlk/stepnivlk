@@ -1,10 +1,50 @@
-<h1>Příspěvky oštítkované: <%= @tag.name %></h1>
+<section id="" class="pfblock-gray">
+  <div class="container">
+    <div class="row text-center">
+        <ol class="breadcrumb">
+          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li>Štítky</li>
+          <li class="active"><%= @tag.name %></li>
+        </ol>
+      </div>
 
-<ul>
-  <% @tag.posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post) %></li>
+      <div class="row">
+        <div class="pfblock-header wow fadeInUp">
+          <h3 class="pfblock-title">Příspěvky oštítkované: <%= @tag.name %></h3>
+          <div class="pfblock-line"></div>
+        </div>
+      </div>
+
+   <section id="" class="">
+    <div class="container">
+      <div class="row stream">
+  <% @stream.each do |post| %>
+    <% if post.identity == "post" %>
+      <div class="item">
+        <%= link_to post_path(post) do %>
+        <div class="postbox">
+          <div class="box-title">
+            <h4><%= post.title %></h4>
+          </div>
+          <p><%= post.content.truncate(200) %></p>
+        </div>
+        <% end %>
+      </div><!-- ./item -->
+      <% elsif post.identity == "image" %>
+        <div class="item">
+        <%= link_to gallery_image_path(post.gallery_id, post) do %>
+          <div class="photobox">
+            <%= image_tag(post.file.url(:thumb)) %>
+            <div class="box-title">
+              <h4><%= post.file_file_name %></h4>
+            </div>
+          </div>
+        <% end %>
+
+        </div>
+    <% end %>
   <% end %>
-  <% @tag.images.each do |image| %>
-    <li><%= link_to image_tag(image.file.url(:thumb)), gallery_image_path(image.gallery_id, image) %></li>
-  <% end %>
-</ul>
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>

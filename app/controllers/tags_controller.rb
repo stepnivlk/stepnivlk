@@ -6,6 +6,7 @@ class TagsController < ApplicationController
   end
 
   def show
+    @stream = @tag.posts + @tag.images
   end
 
   def destroy

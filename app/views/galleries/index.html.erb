@@ -33,12 +33,11 @@
 
             <% if gallery.images.size > 10 %>
               <%= link_to gallery_path(gallery) do %>
-                <div class="col-sm-3 gallery_thumb_last">
+                <div class="col-sm-3 image_thumb_last">
                   <div class="dots">
-                    <%= fa_icon("image 2x") %>
+                    <strong>+ <%= (gallery.images.size) -10 %></strong>
                   </div>
-                  <div class="dots">
-                    <%= (gallery.images.size) -10 %> dalších fotek</div>
+
                 </div>
               <% end %>
             <% end %>

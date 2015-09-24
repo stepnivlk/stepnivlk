@@ -103,22 +103,42 @@
 
    <section id="about" class="pfblock">
     <div class="container">
-      <div class="row">
+      <div class="row stream">
 
-          <% @stream.each do |post| %>
-          <div class="col-sm-3">
-            <div class="iconbox">
-              <% if post.identity == "post" %>
-                <h4><%= post.title %></h4>
-                <p><%= post.content.truncate(120) %>
+
+          <% @stream.each do |post| %>    
+
+            <% if post.identity == "post" %>
+              <div class="item">
+              <%= link_to post_path(post) do %>
+                <div class="postbox">
+                  <div class="box-title">
+                    <h4><%= post.title %></h4>
+                  </div>
+                  <p><%= post.content.truncate(200) %></p>
+                </div>
+                <% end %>
+              </div><!-- ./item -->
+            <% elsif post.identity == "gallery" %>
+              <div class="item">
+              <%= link_to gallery_path(post) do %>
+                <div class="photobox">
+                  <% post.random_images(1).each do |image| %>
+                      <%= image_tag(image.file.url(:thumb)) %>
+                  <% end %>
+                  <div class="box-title">
+                    <h4><%= post.name %></h4>
+                  </div>
+                </div>
               <% end %>
-              <p><%= post %></p>
-            </div>
-            </div>
-          <% end %>
 
 
-            </div><!-- .row -->
+              </div><!-- ./item -->
+            <% end %>
+
+          <% end %><!-- ./@stream.each -->
+
+      </div><!-- .row -->
     </div><!-- .container -->
   </section>
 

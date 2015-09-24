@@ -3,7 +3,7 @@ class Image < ActiveRecord::Base
 
   belongs_to :gallery
 
-  has_attached_file :file, styles: { original: "1200x1200>", medium: "600>x600", thumb: "x200>" }
+  has_attached_file :file, styles: { original: "1200x1200>", medium: "600>x600", thumb: "260x200#" }
   validates_attachment :file, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
   def prev
@@ -18,5 +18,9 @@ class Image < ActiveRecord::Base
 
   def selfid
     gallery_id
+  end
+
+  def identity
+    "image"
   end
 end

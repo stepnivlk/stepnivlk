@@ -29,7 +29,7 @@
         
 
             <%= markdown post.content_before_break %>
-            <p class="date"><%= post.created_at.strftime("%d/%m/%Y") %></p>
+            <%= post.created_at.strftime("%d/%m/%Y") %><span class="push-right">() Komentářů</span>
                       </div>
                       </div>
       </div>

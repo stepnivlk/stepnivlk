@@ -3,7 +3,7 @@ module Tags
 
   included do
     has_many :taggings
-    has_many :tags, through: :taggings
+    has_many :tags, dependent: :destroy, through: :taggings
   end
 
   def tag_list
