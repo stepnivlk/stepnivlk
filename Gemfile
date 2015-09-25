@@ -39,6 +39,8 @@ gem 'redcarpet'
 gem 'paperclip'
 gem 'paperclip-meta'
 
+
+gem "recaptcha", require: "recaptcha/rails"
 # Use Unicorn as the app server
 # gem 'unicorn'
 

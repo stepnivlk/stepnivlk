@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.sticky.js
+//= require bootstrap-sprockets
 //= require_tree .
 $(document).ready(function() {
+
+
         $('a[href*=#]').bind("click", function(e){
            
       var anchor = $(this);

@@ -113,6 +113,10 @@ a:hover {
   padding: 60px 0 100px;
 }
 
+.block {
+  padding: 60px 0 10px;
+}
+
 .pfblock-gray {
   background: $gray-lighter;
 }
@@ -335,4 +339,36 @@ blockquote {
 
 .push-right {
   margin-left: 80%;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 0;
+  background-color: $gray-lighter;
+  -webkit-box-shadow: 0px 0px 0px #999;
+  -moz-box-shadow:    0px 0px 0px #999;
+  box-shadow:         0px 0px 0px #999;
+  z-index:999;
+
+  &:focus {
+    border: 0;
+    background-color: #E7746F;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 0px #999;
+    -moz-box-shadow:    0px 0px 0px #999;
+    box-shadow:         0px 0px 0px #999;
+    z-index:999;
+  }
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+}
+
+.alert {
+  border-radius: 0;
+  margin-top: 20px;
 }

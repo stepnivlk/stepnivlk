@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   include Tags
+  has_many :comments
 
   # complete this
   def content_before_break
