@@ -7,6 +7,16 @@
   margin: 0 0 20px;
 }
 
+.box {
+  background: #fff;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
+  box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
+
+  text-align: left;
+  padding: 20px 20px;
+  margin: 0 0 20px;
+}
 
 /* appends to row around content sream
    resizes it */
@@ -109,7 +119,7 @@ box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   width: 270px;
   height: 212px;
   text-align: center;
-  color: $gray;
+  color: $gray-light;
   background-color: #fff;
       -webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   -moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
