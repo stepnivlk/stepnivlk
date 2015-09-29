@@ -26,7 +26,7 @@
 
             <li><a href="#contact">Kontakt</a></li>
 
-            <li><a href="#contact"><%= fa_icon "sign-in" %></a></li>
+            <%= content_tag :li, link_to((fa_icon "sign-in"), login_path), class: ("active" if current_page?(login_path)) %>
 
 
           </ul>

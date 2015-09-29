@@ -14,6 +14,15 @@
   @include shadow();
 }
 
+.box-title {
+    padding: 8px;
+    text-align: center
+}
+
+.box-image {
+  padding: 0;
+}
+
 /* appends to row around content sream
    resizes it */
 .stream {
@@ -64,10 +73,7 @@
   }
 }
 
-.box-title {
-    padding: 8px;
-    text-align: center
-  }
+
 
 
 .infobox {

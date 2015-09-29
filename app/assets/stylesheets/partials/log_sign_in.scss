@@ -1,0 +1,55 @@
+.login-logo {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 300;
+  color: #000;
+  background-color: #fff;
+  padding-top: 10px;
+}
+.login-logo a {
+  color: #000;
+  &:hover {
+    color: #000;
+  }
+}
+
+.login-page {
+  background: #d2d6de;
+  background: image-url("rohace03.jpg") no-repeat center center fixed;
+  @include background-size();
+}
+
+.login-box {
+  width: 360px;
+  margin: 7% auto;
+  @include shadow();
+}
+@media (max-width: 768px) {
+  .login-box,
+  .register-box {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+.login-box-body {
+  background: #fff;
+  padding: 20px;
+  color: #444;
+  border-top: 0;
+  color: #666;
+}
+.login-box-body .form-control-feedback {
+  color: #777;
+}
+.login-box-msg  {
+  margin: 0;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+.social-auth-links {
+  margin: 10px 0;
+}
+
+.checkbox {
+    padding-left: 15px;
+}

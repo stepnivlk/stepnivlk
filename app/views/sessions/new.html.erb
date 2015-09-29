@@ -1,0 +1,54 @@
+
+  <div class="login-box">
+    <div class="login-logo">
+    <%= image_tag("vlk3.png", alt: "logo") %>
+    </div>
+
+    <div class="login-box-body">
+
+      <p class="login-box-msg">Přihlásit</p>
+      <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+
+
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <div class="form-group has-feedback">
+        <div class="input-group col-xs-12">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <div class="input-group col-xs-12">
+          <%= f.label :password, "Heslo" %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-8">    
+
+            <%= f.label :remember_me, class: "checkbox" do %>
+              <%= f.check_box :remember_me %>
+              <span> Zůstat přihlášen(a)</span>
+            <% end %>
+
+        </div>
+
+        <div class="col-xs-4">
+          <%= f.submit "Přihlásit", class: "btn btn-default" %>
+        </div>
+      </div>
+
+      
+    <% end %>
+
+
+
+
+  </div>
+</div>

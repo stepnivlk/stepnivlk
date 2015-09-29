@@ -130,3 +130,22 @@ blockquote {
   }
 }
 
+.progress {
+  border: 0;
+  border-radius: 0;
+  height: 28px;
+  background: $white-light;
+  position: relative;
+  margin: 4px;
+  span {
+    @include vertical-align(absolute);
+    display: block;
+    width: 100%;
+    color: $black;
+    font-size: 1.2em;
+  }
+ }
+
+ .progress-bar-step {
+  background-color: $coral;
+ }

@@ -1,19 +1,15 @@
 Rails.application.routes.draw do
-
   root 'home#index'
-
   resources :posts do
     resources :comments, only: [:create, :destroy]
   end
-
-
   resources :galleries do 
     resources :images, only: [:show, :edit, :update]
   end
-
   resources :tags, only: [:index, :show, :destroy]
-  
   get 'home/index'
+  get 'login' => 'sessions#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
