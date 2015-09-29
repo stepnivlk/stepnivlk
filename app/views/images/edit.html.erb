@@ -1,3 +1,23 @@
-<h1>Edit Image</h1>
+<section id="" class="pfblock-gray">
+  <div class="row text-center">
+    <div class="col-sm-4 col-sm-offset-4">
+      <ol class="breadcrumb">
+        <li><strong><%= link_to "~", root_path %></strong></li>
+        <li><%= link_to "Galerie", galleries_path %></li>
+        <li><%= link_to @image.gallery_id, gallery_path(@image.gallery_id) %></li>
+        <li class="active"><%= @image.id %></li>
+      </ol>
+    </div>
+  </div>
 
-<%= render partial: 'form' %>
+  <div class="box">
+    <div class="pfblock-header wow fadeInUp">
+      <h4 class="pfblock-title">Upravit obrázek</h4>
+      <div class="pfblock-line"></div>
+    </div>
+
+    <%= render partial: 'form' %>
+
+  </div>
+
+</section>

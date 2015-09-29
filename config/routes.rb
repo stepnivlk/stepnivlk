@@ -1,23 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'tags/index'
-
-  get 'tags/show'
-
-  get 'tags/destroy'
-
   root 'home#index'
 
   resources :posts do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
 
 
   resources :galleries do 
-    resources :images
+    resources :images, only: [:show, :edit, :update]
   end
 
-  resources :tags
+  resources :tags, only: [:index, :show, :destroy]
   
   get 'home/index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,46 @@
+.pfblock {
+  padding: 60px 0 100px;
+}
+
+.block {
+  padding: 60px 0 10px;
+}
+
+.pfblock-gray {
+  background: $gray-lighter;
+}
+
+.pfblock-header {
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.pfblock-header-left {
+  text-align: left;
+}
+
+.pfblock-header-left .pfblock-line {
+  width: inherit;
+  margin: 30px 0;
+}
+
+.pfblock-title{
+    font-weight: 800;
+}
+
+.pfblock-subtitle {
+  font-family: Raleway, "Times New Roman", Times, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.pfblock-line {
+  background: rgba(135, 135, 135, 0.5);
+  width: 100px;
+  height: 1px;
+  margin: 20px auto;
+}
+
+.pfblock-icon {
+  font-size: 32px;
+}

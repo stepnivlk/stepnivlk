@@ -1,27 +1,22 @@
 class ImagesController < ApplicationController
   before_action :find_image, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @images = Image.all
-  end
-
   #delete this
-  def new
-    @image = Image.new
-  end
+  # def new
+  #   @image = Image.new
+  # end
 
-  def create
-    @image = Image.new image_params
-    if @image.save
-      redirect_to gallery_image_path(@image.gallery_id, @image), notice: "Your image was successfully saved"
-    else
-      render 'new', notice: "Unable to save your image"
-    end
-  end
+  # def create
+  #   @image = Image.new image_params
+  #   if @image.save
+  #     redirect_to gallery_image_path(@image.gallery_id, @image), notice: "Your image was successfully saved"
+  #   else
+  #     render 'new', notice: "Unable to save your image"
+  #   end
+  # end
 
   def show
-      @gallery_name = Gallery.find(@image.gallery_id).name
-
+    @gallery_name = Gallery.find(@image.gallery_id).name
   end
 
   def edit

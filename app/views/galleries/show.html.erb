@@ -1,29 +1,33 @@
-  <section id="services" class="pfblock pfblock-gray">
-    <div class="container">
-      <div class="row">
+<section id="services" class="pfblock-gray">
+  <div class="container">
 
-        <div class="col-sm-8 col-sm-offset-2">
-
-          <div class="pfblock-header wow fadeInUp">
-            <h2 class="pfblock-title"><%= @gallery.name %><br></h2>
-            <div class="pfblock-line"></div>
-          </div>
-
-          <% @gallery.images.each do |image| %>
-            <%= link_to image_tag(image.file.url(:thumb)), gallery_image_path(@gallery, image) %>
-
-          <% end %>
-
-        </div>
-
+    <div class="row">
+      <div class="text-center">
+        <ol class="breadcrumb">
+          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li><%= link_to "Galerie", galleries_path %></li>
+          <li class="active"><%= @gallery.id %></li>
+        </ol>
       </div>
+    </div>
 
+    <div class="row">
+      <div class="pfblock-header wow fadeInUp">
+        <h2 class="pfblock-title"><%= @gallery.name %></h2>
+        <div class="pfblock-line"></div>
+        <div class="pfblock-subtitle">
+          <%= @gallery.description %>
+        </div>
+      </div>
+    </div>
 
+    <div class="row">
+      <% @gallery.images.each do |image| %>
+        <div class="col-sm-3 gallery_thumb">
+          <%= link_to image_tag(image.file.url(:thumb), class: "image_thumb"), gallery_image_path(@gallery, image) %>
+        </div>
+      <% end %>
+    </div>
 
-
-
-
-
-
-</div>
+  </div>
 </section>

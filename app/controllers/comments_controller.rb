@@ -1,18 +1,30 @@
 class CommentsController < ApplicationController
+
   def create
-    @comment = Comment.new(comment_params)
-    @comment.post_id = params[:post_id]
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.build(comment_params)
 
     if verify_recaptcha
-      @comment.save
-      redirect_to post_path(@comment.post)
+      if @comment.save
+        flash[:success] = "Komentar pridan!"
+        redirect_to post_path(@post)
+      else
+        @comments = @post.comments
+        render "posts/show"
+      end
     else
       flash.delete(:recaptcha_error)
-      flash[:danger] = "Prosim zaskrtnete policko I'm not a robot."
+      flash[:warning] = "Prosim zaskrtnete policko I'm not a robot."
       redirect_to post_path(@comment.post)
     end
-
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    flash[:danger] = "Komentar odstranen!"
+    redirect_to post_path(@comment.post)
+  end  
 
 
 private

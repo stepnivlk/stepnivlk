@@ -10,17 +10,19 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new post_params
+    @post = Post.new(post_params)
     if @post.save
-      redirect_to @post, notice: "Your post was successfully saved"
+      flash[:success] = "Your post was successfully saved"
+      redirect_to @post
     else
-      render 'new', notice: "Unable to save your post"
+      flash[:warning] = "Unable to save your post"
+      render 'new'
     end
   end
 
   def show
-    @comment = Comment.new
-    @comment.post_id = @post.id
+    @comment = @post.comments.build
+    @comments = @post.comments
   end
 
   def edit
@@ -28,7 +30,8 @@ class PostsController < ApplicationController
 
   def update
     if @post.update post_params
-      redirect_to @post, notice: "Your post was cuccessfully saved"
+      flash[:success] = "Your post was successfully saved"
+      redirect_to @post
     else
       render 'edit'
     end

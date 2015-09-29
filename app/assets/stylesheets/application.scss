@@ -2,6 +2,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "home";
 @import "pygments";
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import "colors";
+@import "mixins";
+@import  "main";
+@import "partials/home";
+@import "partials/navigation";
+@import "partials/blocks";
 @import "partials/boxes";
+@import "partials/buttons";
+@import "partials/transition";

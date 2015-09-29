@@ -8,22 +8,22 @@
 
   <div class="form-area"> 
     <%= form_for [ @post, @comment ] do |f| %>
-  <% if @comment.errors.any? %>
-  <div id="error_explanation">
-    <div class="alert alert-danger">
-      The form contains <%= pluralize(@comment.errors.count, "error") %>.
-    </div>
-    <ul>
-      <% @comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
 
+      <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-danger">
+            The form contains <%= pluralize(@comment.errors.count, "error") %>.
+          </div>
+          <ul>
+            <% @comment.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
       <div class="form-group">
-        <div class="input-group">
+        <div class="input-group col-xs-4">
           <%= f.label :author, "Jméno:" %><br/>
           <%= f.text_field :author, class: "form-control" %>
         </div>
@@ -32,13 +32,18 @@
       <div class="form-group">
         <div class="input-group col-xs-12">
           <%= f.label :body, "Komentář:" %><br/>
-          <%= f.text_area :body, rows: "4", maxlength: "140", class: "form-control"  %>
+          <%= f.text_area :body, rows: "4", maxlength: "800", class: "form-control"  %>
         </div>
       </div>
 
+      <div class="row">
+      <div class="col-sm-6">
       <%= recaptcha_tags %>
-      <%= f.submit 'Odeslat', class: "btn btn-default" %>
-
+      </div>
+      <div class="col-sm-6">
+      <%= f.submit 'Odeslat', class: "btn btn-default push-right" %>
+      </div>
+      </div>
     <% end %>
   </div>
 </div>

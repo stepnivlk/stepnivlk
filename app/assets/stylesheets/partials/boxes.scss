@@ -1,7 +1,6 @@
 .iconbox {
   background: #fff;
   border-bottom: 1px solid #d4d4d4;
-
   text-align: left;
   padding: 20px 20px;
   margin: 0 0 20px;
@@ -9,13 +8,10 @@
 
 .box {
   background: #fff;
-    -webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  -moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-
   text-align: left;
   padding: 20px 20px;
   margin: 0 0 20px;
+  @include shadow();
 }
 
 /* appends to row around content sream
@@ -45,16 +41,13 @@
 
   max-width: 260px;
   background: #fff;
--webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
--moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   display: inline-block;
-
   text-align: left;
+  @include shadow();
   padding: 20px 20px;
     &:hover {
     color: #fff;
-    background: #E7746F;
+    background: $coral;
   }
 }
 
@@ -64,15 +57,10 @@ box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   background: #fff;
   padding: 0px;
   display: inline-block;
-  -webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  -moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-
-
-  
+  @include shadow();
   &:hover {
     color: #fff;
-    background: #E7746F;
+    background: $coral;
   }
 }
 
@@ -88,8 +76,6 @@ box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   background: $gray-lighter;
   min-height: 360px;
 }
-
-
 
 .iconbox-icon {
   margin: 0 0 15px;
@@ -107,9 +93,7 @@ box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   margin-right: 20px;
   margin-bottom: 20px;
   border: 6px solid #fff;
-    -webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  -moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
+  @include shadow();
 }
 
 .image_thumb_last {
@@ -121,8 +105,5 @@ box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
   text-align: center;
   color: $gray-light;
   background-color: #fff;
-      -webkit-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  -moz-box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-  box-shadow: 1px 1px 1px 0px rgba(212,212,212,0.74);
-
+  @include shadow();
 }
