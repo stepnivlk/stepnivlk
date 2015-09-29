@@ -1,41 +1,51 @@
-  <!-- Navigation start -->
+<header class="header">
 
-  <header class="header">
+  <nav class="navbar navbar-custom" role="navigation">
 
-    <nav class="navbar navbar-custom" role="navigation">
+    <div class="container">
 
-      <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to root_path, class: "navbar-brand" do %><span><%= image_tag("vlk2.png", alt: "logo") %></span> Stepní Vlk<% end %>
+      </div>
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to root_path, class: "navbar-brand" do %><span><%= image_tag("vlk2.png", alt: "logo") %></span> Stepní Vlk<% end %>
-        </div>
+      <div class="collapse navbar-collapse" id="custom-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <%= content_tag :li, link_to("Domů", root_path), class: ("active" if current_page?(root_path))  %>
+          <%= content_tag :li, link_to("Nástěnka", tags_path), class: ("active" if current_page?(tags_path))  %>
+          <%= content_tag :li, link_to("Blog", posts_path), class: ("active" if current_page?(posts_path))  %>
+          <%= content_tag :li, link_to("Galerie", galleries_path), class: ("active" if current_page?(galleries_path))  %>
+   
 
-        <div class="collapse navbar-collapse" id="custom-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <%= content_tag :li, link_to("Domů", root_path), class: ("active" if current_page?(root_path))  %>
-            <%= content_tag :li, link_to("Nástěnka", tags_path), class: ("active" if current_page?(tags_path))  %>
-            <%= content_tag :li, link_to("Blog", posts_path), class: ("active" if current_page?(posts_path))  %>
-            <%= content_tag :li, link_to("Galerie", galleries_path), class: ("active" if current_page?(galleries_path))  %>
-     
+          <li><a href="#contact">Kontakt</a></li>
 
-            <li><a href="#contact">Kontakt</a></li>
+          <% if logged_in? %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= fa_icon "user" %> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <%= content_tag :li, link_to("Profil", current_user)%>
+                <li><a href="#">Nastaveni</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Novy blog</a></li>
+                <li><a href="#">Nova galerie</a></li>
+                <li class="divider"></li>
+                <%= content_tag :li, link_to("Odhlasit", logout_path, method: "delete")%>
+              </ul>
+            </li>
+          <% else %>
+            <%= content_tag :li, link_to((fa_icon "unlock"), login_path), class: ("active" if current_page?(login_path)) %>
+          <% end %>
 
-            <%= content_tag :li, link_to((fa_icon "sign-in"), login_path), class: ("active" if current_page?(login_path)) %>
+        </ul>
+      </div>
 
+    </div><!-- .container -->
 
-          </ul>
-        </div>
+  </nav>
 
-      </div><!-- .container -->
-
-    </nav>
-
-  </header>
-
-  <!-- Navigation end -->
+</header>

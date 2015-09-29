@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
         redirect_to post_path(@post)
       else
         @comments = @post.comments
+        flash.now[:warning] = "Unable to save your comment"
         render "posts/show"
       end
     else

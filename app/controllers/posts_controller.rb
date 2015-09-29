@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       flash[:success] = "Your post was successfully saved"
       redirect_to @post
     else
-      flash[:warning] = "Unable to save your post"
+      flash.now[:warning] = "Unable to save your post"
       render 'new'
     end
   end
@@ -33,6 +33,7 @@ class PostsController < ApplicationController
       flash[:success] = "Your post was successfully saved"
       redirect_to @post
     else
+      flash.now[:warning] = "Unable to save your post"
       render 'edit'
     end
   end
