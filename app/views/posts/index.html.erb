@@ -27,8 +27,10 @@
           </div>
         
 
-            <%= markdown post.content_before_break %>
-            <%= post.created_at.strftime("%d/%m/%Y") %><span class="push-right">(<%= post.comments.count %>) Komentářů</span>
+          <%= markdown post.content_before_break %>
+          <div class="text-right">
+          <%= post.created_at.strftime("%d/%m/%Y") %><%= " | " + post.user.name if post.user %> | <%= post.comments.count %> Komentářů
+          </div>
                       </div>
       </div>
           <% end %>

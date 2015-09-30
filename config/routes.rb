@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :galleries do 
-    resources :images, only: [:show, :edit, :update]
+    resources :images, only: [:show, :edit, :update, :destroy]
   end
 
   resources :tags, only: [:index, :show, :destroy]

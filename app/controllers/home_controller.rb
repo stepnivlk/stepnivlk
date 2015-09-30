@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  skip_before_action :logged_in_user
+
   def index
     @posts = Post.all.order("created_at desc")
     @stream = posts_and_galleries_sorted

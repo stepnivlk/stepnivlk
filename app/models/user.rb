@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
 
+  has_many :posts
+  has_many :galleries
+
   before_save { self.email = email.downcase }
 
   validates :name, presence: true, length: { in: 3..50 }
@@ -13,13 +16,15 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 
-  def User.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :  BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
-  end
+  class << self
+    def digest(string)
+      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :  BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+    end
 
-  def User.new_token
-    SecureRandom.urlsafe_base64
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
   end
 
   def remember

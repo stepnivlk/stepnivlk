@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
+  skip_before_action :logged_in_user, only: [:index, :show]
   before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.order("created_at DESC").all
@@ -10,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Your post was successfully saved"
       redirect_to @post
@@ -50,6 +52,13 @@ class PostsController < ApplicationController
     end
 
     def find_post
-    @post = Post.find(params[:id])
-  end
+      @post = Post.find(params[:id])
+    end
+
+    def correct_user
+      unless @post.user == current_user || current_user.admin
+        flash[:danger] = "You don't have rights to perform this operation."
+        redirect_to(posts_path(anchor: "firstinfo"))
+      end
+    end
 end

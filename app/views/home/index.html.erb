@@ -1,5 +1,5 @@
 <!-- services -->
-<section id="services" class="pfblock pfblock-gray">
+<section id="firstinfo" class="pfblock pfblock-gray">
     <div class="container">
       <div class="row">
 
@@ -117,7 +117,7 @@
                   <div class="box-title">
                     <h4><%= post.title %></h4>
                   </div>
-                  <p><%= post.content.truncate(200) %></p>
+                  <p><%= strip_tags(markdown post.content.truncate(200)) %></p>
                 </div>
                 <% end %>
               </div><!-- ./item -->

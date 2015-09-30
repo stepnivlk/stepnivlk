@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  skip_before_action :logged_in_user, only: [:index, :show]
   before_action :find_tag, only: [:show, :destroy]
 
   def index

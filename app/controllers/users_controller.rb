@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :logged_in_admin, only: [:new, :create]
   before_action :find_user, only: [:show]
 
   def show
@@ -11,7 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "You were successfully signed up"
+      flash[:success] = "New user was successfully signed up."
       redirect_to @user
     else
       render 'new'

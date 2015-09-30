@@ -1,5 +1,7 @@
 class ImagesController < ApplicationController
+  skip_before_action :logged_in_user, only: :show
   before_action :find_image, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   #delete this
   # def new
@@ -16,7 +18,6 @@ class ImagesController < ApplicationController
   # end
 
   def show
-    @gallery_name = Gallery.find(@image.gallery_id).name
   end
 
   def edit
@@ -24,16 +25,18 @@ class ImagesController < ApplicationController
 
   def update
     if @image.update image_params
-      redirect_to gallery_image_path(@image.gallery_id, @image), notice: "Your image was cuccessfully saved"
+      flash[:success] = "Image succesfully updated."
+      redirect_to gallery_image_path(@image.gallery, @image)
     else
       render 'edit'
     end
   end
 
+  # fix if not destroyed
   def destroy
     @image.destroy
-    #fix this to gallery path
-    redirect_to gallery_path(@image.gallery_id)
+    flash[:danger] = "Image deleted."
+    redirect_to gallery_path(@image.gallery)
   end
 
   private
@@ -44,6 +47,13 @@ class ImagesController < ApplicationController
 
     def find_image
       @image = Image.find(params[:id])
+    end
+
+    def correct_user
+      unless @image.gallery.user == current_user || current_user.admin
+        flash[:danger] = "You don't have rights to perform this operation."
+        redirect_to(gallery_image_path(@image.gallery, @image))
+      end
     end
 
 end
