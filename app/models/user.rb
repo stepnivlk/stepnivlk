@@ -1,8 +1,20 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
 
-  has_many :posts
-  has_many :galleries
+  has_many :simple_user_infos, dependent: :destroy
+  accepts_nested_attributes_for :simple_user_infos, allow_destroy: true
+
+  has_many :skills, dependent: :destroy
+  accepts_nested_attributes_for :skills, allow_destroy: true
+
+  has_many :educations, dependent: :destroy
+  accepts_nested_attributes_for :educations, allow_destroy: true
+
+  has_many :posts, dependent: :destroy
+  has_many :galleries, dependent: :destroy
+
+  has_attached_file :avatar, styles: { medium: "300x300#", thumb: "100x100#" }, default_url: "/images/:style/missing.png"
+  validates_attachment :avatar, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
   before_save { self.email = email.downcase }
 
@@ -14,7 +26,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   class << self
     def digest(string)
@@ -39,5 +51,10 @@ class User < ActiveRecord::Base
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def age
+    age = Date.today.year - birth_date.year
+    age -= 1 if Date.today < birth_date + age.years
   end
 end

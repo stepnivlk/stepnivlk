@@ -26,15 +26,15 @@
 
           <% if logged_in? %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= fa_icon "user" %> <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="user-icon"><%= image_tag current_user.avatar.url(:thumb), alt: "current_user", class: "user-icon-img" %> <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <%= content_tag :li, link_to("Profil", current_user)%>
-                <li><a href="#">Nastaveni</a></li>
+                <%= content_tag :li, link_to(fa_icon("user") + " Profil", current_user)%>
+                <li><a href="#"><%= fa_icon("wrench") %> Nastavení</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Novy blog</a></li>
-                <li><a href="#">Nova galerie</a></li>
+                <%= content_tag :li, link_to(fa_icon("file") + " Nový zápisek", new_post_path) %>
+                <li><a href="#"><%= fa_icon("image") %> Nová galerie</a></li>
                 <li class="divider"></li>
-                <%= content_tag :li, link_to("Odhlasit", logout_path, method: "delete")%>
+                <%= content_tag :li, link_to(fa_icon("sign-out") + " Odhlásit", logout_path, method: "delete")%>
               </ul>
             </li>
           <% else %>

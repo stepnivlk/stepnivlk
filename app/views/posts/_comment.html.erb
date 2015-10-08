@@ -1,4 +1,4 @@
 <div>
-  <h4><%= comment.author %></h4> (<%= comment.created_at.strftime("%d/%m/%Y") %>) <%= link_to fa_icon("remove"), post_comment_path(comment.post_id, comment), method: :delete, data: { confirm: "Are you sure ?"} %>
+  <h4><%= comment.author %></h4> (<%= comment.created_at.strftime("%d/%m/%Y") %>) <%= link_to(fa_icon("remove"), post_comment_path(comment.post_id, comment), method: :delete, data: { confirm: "Are you sure ?"}) if current_user && current_user.admin %>
   <p class="comment"><%= comment.body %></p><hr>
 </div>

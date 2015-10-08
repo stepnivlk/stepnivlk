@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930092838) do
+ActiveRecord::Schema.define(version: 20151007111828) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20150930092838) do
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
+
+  create_table "educations", force: :cascade do |t|
+    t.date     "start"
+    t.date     "end"
+    t.string   "name"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "educations", ["user_id"], name: "index_educations_on_user_id"
 
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
@@ -59,6 +71,28 @@ ActiveRecord::Schema.define(version: 20150930092838) do
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
+  create_table "simple_user_infos", force: :cascade do |t|
+    t.string   "info"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "simple_user_infos", ["user_id"], name: "index_simple_user_infos_on_user_id"
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "skill"
+    t.integer  "in_love_index"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "skill_index"
+  end
+
+  add_index "skills", ["in_love_index"], name: "index_skills_on_in_love_index"
+  add_index "skills", ["skill_index"], name: "index_skills_on_skill_index"
+  add_index "skills", ["user_id"], name: "index_skills_on_user_id"
+
   create_table "taggings", force: :cascade do |t|
     t.integer  "post_id"
     t.integer  "tag_id"
@@ -84,9 +118,16 @@ ActiveRecord::Schema.define(version: 20150930092838) do
     t.string   "email"
     t.string   "password_digest"
     t.boolean  "admin"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "remember_digest"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "real_name"
+    t.datetime "birth_date"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"

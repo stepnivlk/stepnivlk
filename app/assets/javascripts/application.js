@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery.sticky.js
 //= require bootstrap-sprockets
+//= require nested_form_fields
+//= require bootstrap-datepicker
 //= require_tree .
 $(document).ready(function() {
 
@@ -33,6 +35,7 @@ $(document).ready(function() {
     }
   });
 
+  $('.input-daterange').datepicker();
   $('.header').sticky({
     topSpacing: 0
   });
@@ -47,6 +50,7 @@ $(document).ready(function() {
     $('#home').css({'background-attachment': 'scroll'});
   } else {
     $('#home').parallax('50%', 0.1);
-  }  
+  }
+
 
 });

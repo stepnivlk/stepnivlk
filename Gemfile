@@ -39,6 +39,9 @@ gem 'redcarpet'
 gem 'paperclip'
 gem 'paperclip-meta'
 
+gem 'nested_form_fields'
+
+gem 'bootstrap-datepicker-rails'
 
 gem "recaptcha", require: "recaptcha/rails"
 # Use Unicorn as the app server

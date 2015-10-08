@@ -1,6 +1,7 @@
 class TagsController < ApplicationController
   skip_before_action :logged_in_user, only: [:index, :show]
   before_action :find_tag, only: [:show, :destroy]
+  before_action :correct_user, only: :destroy
 
   def index
     @tags = Tag.all
@@ -25,6 +26,13 @@ class TagsController < ApplicationController
     end
 
     def find_tag
-    @tag = Tag.find(params[:id])
-  end
+      @tag = Tag.find(params[:id])
+    end
+
+    def correct_user
+      unless current_user.admin
+        flash[:danger] = "You don't have rights to perform this operation."
+        redirect_to(:back)
+      end
+    end
 end

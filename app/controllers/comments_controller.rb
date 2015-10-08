@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :logged_in_admin, only: :destroy
+  skip_before_action :logged_in_user, only: :create
+  before_action :correct_user, only: :destroy
   
   def create
     @post = Post.find(params[:post_id])
@@ -32,5 +33,12 @@ class CommentsController < ApplicationController
 private
   def comment_params
     params.require(:comment).permit(:title, :author, :body)
+  end
+
+  def correct_user
+    unless current_user.admin
+      flash[:danger] = "You don't have rights to perform this operation."
+      redirect_to(post_path(@post))
+    end
   end
 end

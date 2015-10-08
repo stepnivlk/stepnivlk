@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  skill: MyString
+  in_love_index: 1
+  user_id: 
+
+two:
+  skill: MyString
+  in_love_index: 1
+  user_id: 

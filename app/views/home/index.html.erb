@@ -26,7 +26,7 @@
 
           <div class="iconbox infobox wow slideInLeft">
             <div class="iconbox-icon text-center">
-              <%= fa_icon "database" %>
+              <%= image_tag "icon_webdev.png", alt: "webove aplikace" %>
             </div>
             <div class="iconbox-text text-center">
               <h3 class="iconbox-title">Webové Aplikace</h3>
@@ -44,7 +44,7 @@
 
           <div class="iconbox infobox wow slideInRight">
             <div class="iconbox-icon text-center">
-              <%= fa_icon "server" %>
+              <%= image_tag "icon_server.png", alt: "sprava serveru" %>
             </div>
             <div class="iconbox-text">
               <h3 class="iconbox-title text-center">Správa serverů</h3>
@@ -60,7 +60,7 @@
 
           <div class="iconbox infobox wow slideInRight">
             <div class="iconbox-icon text-center">
-              <%= fa_icon "keyboard-o" %>
+              <%= image_tag "icon_programming.png", alt: "programovani" %>
             </div>
             <div class="iconbox-text">
               <h3 class="iconbox-title text-center">Programování</h3>
@@ -76,7 +76,7 @@
 
           <div class="iconbox infobox wow slideInLeft">
             <div class="iconbox-icon text-center">
-              <%= fa_icon "photo" %>
+              <%= image_tag "icon_graphics.png", alt: "grafika" %>
             </div>
             <div class="iconbox-text">
               <h3 class="iconbox-title text-center">Grafika</h3>
@@ -148,7 +148,7 @@
     <%= image_tag("wolf-section.png", alt: "wolf-section", class: "center") %>
   </section>
 
-  <section id="" class="pfblock-gray">
+<section id="" class="pfblock-gray">
   <div class="container">
 
     <div class="row">
@@ -160,6 +160,12 @@
       </div>
     </div><!-- .row -->
 
+    <div class="row pfblock">
+      <div class="col-sm-8 col-sm-offset-2">
+        <%= render partial: 'shared/userbox' %>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-sm-6">
         <div class="box">
@@ -168,74 +174,56 @@
             <div class="pfblock-line"></div>
           </div>
 
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-              <span><strong>Ruby</strong></span>
+          <% @skills.each do |s| %>
+            <div class="progress">
+              <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="<%= s.skill_index %>0" aria-valuemin="0" aria-valuemax="100" style="width: <%= s.skill_index %>0%;">
+              <span><strong><%= s.skill %></strong></span>
             </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-              <span><strong>Ruby on Rails</strong></span>
             </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-              <span><strong>C</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-              <span><strong>Python</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-              <span><strong>(S)CSS</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-              <span><strong>HTML</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-              <span><strong>BASH</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-              <span><strong>Bootstrap</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-              <span><strong>Javascript</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-              <span><strong>Linux</strong></span>
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar-step" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-              <span><strong>jQuery</strong></span>
-            </div>
-          </div>
-
-
+          <% end %>
 
         </div>
       </div>
+
       <div class="col-sm-6">
         <div class="box">
           <div class="box-title">
             <h4>Vzdělání a zkušenosti</h4> 
             <div class="pfblock-line"></div>
           </div>
+          <div class="box-content">
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                  2005-2009
+              </div>
+              <div class="col-sm-8 box-maininfo">
+              <h5>Elektrotechnika</h5>
+              Střední odborná škola Nymburk
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                2009-dosud
+              </div>
+              <div class="col-sm-8 box-maininfo">
+                <h5>OSVČ</h5>
+                <p>
+                Správa sítě ERnetFree.net.<br>
+                Administrace Linux serverů.<br>
+                Síťováni pomocí technologií firem Mikrotik, Ubiquiti, Cisco, reálné zkušenosti z provozu velké sítě. Správa wifi spojů v pásmech 2.4, 5, 10Ghz. 
+                Správa podnikových informačních systémů.<br>
+                Správa web, mail serverů, databází, virtualizace.
+                Skriptování v RUBY v BASH a C.<br>
+                Správa MS Windows server a MSSQL databází. 
+                Výškové práce.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div><!-- .row -->
 
   </div><!-- .container -->

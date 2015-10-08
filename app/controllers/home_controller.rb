@@ -4,6 +4,9 @@ class HomeController < ApplicationController
   def index
     @posts = Post.all.order("created_at desc")
     @stream = posts_and_galleries_sorted
+    @user = User.find(1)
+    @simple_user_infos = @user.simple_user_infos
+    @skills = @user.skills
   end
 
   private

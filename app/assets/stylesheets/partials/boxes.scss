@@ -9,7 +9,7 @@
 .box {
   background: #fff;
   text-align: left;
-  padding: 20px 20px;
+  padding: 20px 20px 30px;
   margin: 0 0 20px;
   @include shadow();
 }
@@ -19,10 +19,43 @@
     text-align: center
 }
 
+
 .box-image {
   padding: 0;
 }
 
+.box-maininfo {
+  color: #000;
+  background-color: #fff;
+}
+
+.userbox{
+  padding: 40px 20px 40px 40px;
+  margin-right: 0px;
+}
+
+.userbox-title {
+    padding: 8px 0px 10px 0px;
+    margin-left: -20px;
+    text-align: left
+}
+
+.userbox-links {
+  margin-left: -20px;
+  margin-top: 20px;
+}
+
+
+.userbox img {
+    width: 260px;
+    height: 260px;
+    max-width: 260px;
+    max-height: 260px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 4px solid rgba(79, 109, 122, 0.2);
+  }
 /* appends to row around content sream
    resizes it */
 .stream {
@@ -43,6 +76,7 @@
   color: $gray;
  }
 }
+
 
 /* wrap around blog posts only */
 .postbox {

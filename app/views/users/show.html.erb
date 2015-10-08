@@ -1,1 +1,16 @@
-<%= @user.name %>, <%= @user.email %>
+<section id="" class="pfblock-gray">
+  <div class="row text-center">
+    <div class="col-sm-4 col-sm-offset-4">
+      <ol class="breadcrumb">
+        <li><strong><%= link_to "~", root_path %></strong></li>
+        <li>Uživatelé</li>
+        <li class="active"><%= @user.id %></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= render partial: 'shared/userbox' %>
+  </div>
+
+</section>
