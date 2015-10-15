@@ -1,36 +1,59 @@
 <section id="" class="pfblock-gray">
-  <div class="row text-center">
-    <div class="col-sm-4 col-sm-offset-4">
-      <ol class="breadcrumb">
-        <li><strong><%= link_to "~", root_path %></strong></li>
-        <li><%= link_to "Blog", posts_path %></li>
-        <li class="active"><%= @post.id %></li>
-      </ol>
-    </div>
-  </div>
+  <div class="container">
 
-  <div class="box">
-    <div class="pfblock-header wow fadeInUp">
-      <h3 class="pfblock-title"><%= @post.title %><br></h3>
-      <div class="pfblock-line"></div>
-      <div class="pfblock-subtitle">
-        <%= fa_icon "tags" if @post.tags.any? %>
-        <% @post.tags.each do |tag| %>
-          <div class="btn-group" role="group" aria-label="...">
-            <%= link_to tag.name, tag_path(tag), class: "tag btn btn-default" %>
-            <%= link_to fa_icon("remove"), tag_path(tag), class: "tag btn btn-default btn-tag-delete", method: :delete, data: {confirm: "Really delete the tag?"} %>
-          </div>
-        <% end %>
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+        <ol class="breadcrumb">
+          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li><%= link_to "Blog", posts_path %></li>
+          <li class="active"><%= @post.id %></li>
+        </ol>
       </div>
     </div>
 
-    <%= markdown @post.content %>
-     <p class="date"><%= @post.created_at.strftime("%d/%m/%Y") + " | " + @post.user.name if @post.user %></p>
-    <% if (logged_in? && (current_user == @post.user)) || logged_in_admin? %>
-      <%= link_to fa_icon("wrench"), edit_post_path(@post) %> |
-      <%= link_to fa_icon("remove"), post_path(@post), method: :delete, data: { confirm: "Are you sure ?"} %>
-    <% end %>
-  </div>
+    <div class="row">
+      <div class="box">
+        <div class="pfblock-header">
+          <h3 class="pfblock-title"><%= @post.title %><br></h3>
+          <div class="pfblock-line"></div>
+          <div class="pfblock-subtitle">
+            <%= fa_icon "tags" if @post.tags.any? %>
+            <% @post.tags.each do |tag| %>
+              <div class="btn-group" role="group" aria-label="...">
+                <%= link_to tag.name, tag_path(tag), class: "tag btn btn-tag" %>
+                <%= link_to fa_icon("remove"), tag_path(tag), class: "tag btn btn-default btn-tag-delete", method: :delete, data: {confirm: "Really delete the tag?"} %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="box-content">
+          <%= markdown @post.content %>
+        </div>
+
+        <div class="row">
+        <div class="col-sm-6 text-left">
+        <% if (logged_in? && (current_user == @post.user)) || logged_in_admin? %>
+          <%= link_to fa_icon("wrench"), edit_post_path(@post) %> |
+          <%= link_to fa_icon("remove"), post_path(@post), method: :delete, data: { confirm: "Are you sure ?"} %>
+        <% end %>
+        </div>
+
+        <div class="col-sm-6 text-right">
+          <%= link_to @post.user do %>
+            <%= image_tag(@post.user.avatar.url(:thumb), alt: "post_user", class: "user-icon-img") + " " + @post.user.name %>
+          <% end %>
+          |
+          <%= fa_icon("calendar") + " " + @post.created_at.strftime("%d/%m/%Y") %>
+          |
+          <%= fa_icon("comment")%><%= " #{@post.comments.count}" %>
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+<div class="row">
 
   <div class="box" id="comments">
     <div class="pfblock-header wow fadeInUp">
@@ -38,6 +61,10 @@
       <div class="pfblock-line"></div>
     </div>
     <%= render partial: 'posts/comment', collection: @comments.order(created_at: :desc) %>
+
     <%= render partial: 'comments/form' %>
+
+  </div>
+</div>
   </div>
 </section>

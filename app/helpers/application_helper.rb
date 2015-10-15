@@ -43,4 +43,9 @@ module ApplicationHelper
     }
     Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
+
+  def year_or_default(date, default="nyní")
+    return date.strftime("%Y") if date
+    return default
+  end
 end

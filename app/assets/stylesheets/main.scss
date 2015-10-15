@@ -132,9 +132,9 @@ blockquote {
   z-index:999;
 
   &:focus {
-    border: 1px solid $coral;
-    background-color: $coral;
-    color: #fff;
+    border: 1px solid $coral-light;
+    background-color: $coral-light;
+    color: $black;
     -webkit-box-shadow: 0px 0px 0px #999;
     -moz-box-shadow:    0px 0px 0px #999;
     box-shadow:         0px 0px 0px #999;

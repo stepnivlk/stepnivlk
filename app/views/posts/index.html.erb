@@ -2,10 +2,10 @@
   <div class="container">
 
     <div class="row text-center">
-        <ol class="breadcrumb">
-          <li><strong><%= link_to "~", root_path %></strong></li>
-          <li class="active">Blog</li>
-        </ol>
+      <ol class="breadcrumb">
+        <li><strong><%= link_to "~", root_path %></strong></li>
+        <li class="active">Blog</li>
+      </ol>
     </div>
 
 
@@ -15,23 +15,29 @@
       <div class="row">
 
         <div class="box">
-          <div class="pfblock-header wow fadeInUp">
+          <div class="pfblock-header">
             <h3 class="pfblock-title"><%= link_to post.title, post_path(post), class: "post_title" %></h3>
             <div class="pfblock-line"></div>
             <div class="pfblock-subtitle">
               <%= fa_icon "tags" if post.tags.any? %>
               <% post.tags.each do |tag| %>
-                <%= link_to tag.name, tag_path(tag), class: "tag btn btn-default" %>
+                <%= link_to tag.name, tag_path(tag), class: "tag btn btn-tag" %>
               <% end %>
             </div>
           </div>
-        
-
-          <%= markdown post.content_before_break %>
-          <div class="text-right">
-          <%= post.created_at.strftime("%d/%m/%Y") %><%= " | " + post.user.name if post.user %> | <%= post.comments.count %> Komentářů
+          <div class="box-content">
+            <%= markdown post.content_before_break %>
           </div>
-                      </div>
+          <div class="text-right">
+            <%= link_to post.user do %>
+            <%= image_tag(post.user.avatar.url(:thumb), alt: "post_user", class: "user-icon-img") + " " + post.user.name %>
+          <% end %>
+          |
+          <%= fa_icon("calendar") + " " + post.created_at.strftime("%d/%m/%Y") %>
+          |
+          <%= fa_icon("comment")%><%= " #{post.comments.count}" %>
+          </div>
+        </div>
       </div>
           <% end %>
 

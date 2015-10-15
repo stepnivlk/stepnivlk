@@ -1,6 +1,19 @@
 .btn-default {
   border-radius: 0;
   border: 0;
+  padding: 8px 12px 8px 12px;
+  background-color: $gray-lighter;
+  font-size: 14px;
+  &:hover {
+    background-color: $coral;
+    color: #fff;
+  }
+}
+
+.btn-tag {
+  color: $black;
+  border-radius: 0;
+  border: 0;
   padding: 2px 12px 2px 12px;
   background-color: $gray-lighter;
   font-size: 14px;
@@ -19,3 +32,17 @@
     border-left: 1px solid #fff;
   }
 }
+
+.btn-primary {
+  border-radius: 0;
+  border: 0;
+  padding: 8px 12px 8px 12px;
+  background-color: $coral-light;
+  color: $black;
+  font-size: 14px;
+  &:hover {
+    background-color: $coral;
+    color: #fff;
+  }
+}
+

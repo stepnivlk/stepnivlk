@@ -8,16 +8,16 @@ class CommentsController < ApplicationController
 
     if verify_recaptcha
       if @comment.save
-        flash[:success] = "Komentar pridan!"
+        flash[:success] = "Komentář přidán."
         redirect_to post_path(@post)
       else
         @comments = @post.comments
-        flash.now[:warning] = "Unable to save your comment"
+        flash.now[:warning] = "Komentář nebylo možné uložit"
         render "posts/show"
       end
     else
       flash.delete(:recaptcha_error)
-      flash[:warning] = "Prosim zaskrtnete policko I'm not a robot."
+      flash[:warning] = "Prosím zaškrtněte políčko I'm not a robot."
       redirect_to post_path(@comment.post)
     end
   end
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    flash[:danger] = "Komentar odstranen!"
+    flash[:danger] = "Komentář odstraněn!"
     redirect_to post_path(@comment.post)
   end  
 
@@ -37,7 +37,7 @@ private
 
   def correct_user
     unless current_user.admin
-      flash[:danger] = "You don't have rights to perform this operation."
+      flash[:danger] = "Nemáte oprávnění k provedení této operace."
       redirect_to(post_path(@post))
     end
   end

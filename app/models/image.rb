@@ -3,8 +3,11 @@ class Image < ActiveRecord::Base
 
   belongs_to :gallery
 
-  has_attached_file :file, styles: { original: "1200x1200>", medium: "600>x600", thumb: "260x200#" }
+
+  has_attached_file :file, styles: { original: "1200x1200>", medium: "800>x800", thumb: "260x200#" }
   validates_attachment :file, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
+  after_post_process :add_exif
 
   def prev
     prev_item = Image.where("id < ?", id).last
@@ -22,5 +25,13 @@ class Image < ActiveRecord::Base
 
   def identity
     "image"
+  end
+
+  def add_exif
+    exif = EXIFR::JPEG.new(file.queued_for_write[:original].path)
+    return unless exif
+    self.exif_date = exif.date_time.to_date
+    self.exif_exposure_time = exif.exposure_time.to_s
+    self.exif_f_number = exif.f_number.to_f
   end
 end

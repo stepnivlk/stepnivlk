@@ -2,7 +2,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="text-center">
+      <div class="col-sm-4 col-sm-offset-4 text-center">
         <ol class="breadcrumb">
           <li><strong><%= link_to "~", root_path %></strong></li>
           <li><%= link_to "Galerie", galleries_path %></li>
@@ -28,6 +28,20 @@
         </div>
       <% end %>
     </div>
+    <div class="row">
+            <div class="col-sm-6 text-left">
+        <%= link_to fa_icon("wrench"), edit_gallery_path(@gallery) %> |
+        <%= link_to fa_icon("remove"), @gallery, data: { confirm: "Are you sure?" }, method: :delete %>
+        </div>
+        <div class="col-sm-6 text-right">
+          <%= link_to @gallery.user do %>
+            <%= image_tag(@gallery.user.avatar.url(:thumb), alt: "post_user", class: "user-icon-img") + " " + @gallery.user.name %>
+          <% end %>
+          |
+          <%= fa_icon("calendar") + " " + @gallery.created_at.strftime("%d/%m/%Y") %>
+        </div>
+      </div>
+      </div>
 
   </div>
 </section>

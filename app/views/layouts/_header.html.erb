@@ -16,7 +16,7 @@
 
       <div class="collapse navbar-collapse" id="custom-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <%= content_tag :li, link_to("Domů", root_path), class: ("active" if current_page?(root_path))  %>
+          <%= content_tag :li, link_to("Domů", root_path(anchor: "firstinfo")), class: ("active" if current_page?(root_path))  %>
           <%= content_tag :li, link_to("Nástěnka", tags_path), class: ("active" if current_page?(tags_path))  %>
           <%= content_tag :li, link_to("Blog", posts_path), class: ("active" if current_page?(posts_path))  %>
           <%= content_tag :li, link_to("Galerie", galleries_path), class: ("active" if current_page?(galleries_path))  %>
@@ -32,7 +32,7 @@
                 <li><a href="#"><%= fa_icon("wrench") %> Nastavení</a></li>
                 <li class="divider"></li>
                 <%= content_tag :li, link_to(fa_icon("file") + " Nový zápisek", new_post_path) %>
-                <li><a href="#"><%= fa_icon("image") %> Nová galerie</a></li>
+                <%= content_tag :li, link_to(fa_icon("image") + " Nová galerie", new_gallery_path) %>
                 <li class="divider"></li>
                 <%= content_tag :li, link_to(fa_icon("sign-out") + " Odhlásit", logout_path, method: "delete")%>
               </ul>

@@ -89,9 +89,9 @@
   @include shadow();
   padding: 20px 20px;
     &:hover {
-    -webkit-box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
--moz-box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
-box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
+    box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
   }
 }
 
@@ -103,9 +103,9 @@ box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
   display: inline-block;
   @include shadow();
   &:hover {
-    -webkit-box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
--moz-box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
-box-shadow: 0px 0px 12px 0px rgba(221,110,66,1);
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
+    box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
   }
 }
 

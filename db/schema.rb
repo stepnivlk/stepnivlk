@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007111828) do
+ActiveRecord::Schema.define(version: 20151015162426) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "title"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 20151007111828) do
 
   add_index "educations", ["user_id"], name: "index_educations_on_user_id"
 
+  create_table "experiences", force: :cascade do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.string   "name"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "experiences", ["user_id"], name: "index_experiences_on_user_id"
+
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -43,6 +55,7 @@ ActiveRecord::Schema.define(version: 20151007111828) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.boolean  "public"
   end
 
   add_index "galleries", ["user_id"], name: "index_galleries_on_user_id"
@@ -54,9 +67,12 @@ ActiveRecord::Schema.define(version: 20151007111828) do
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
     t.text     "file_meta"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "gallery_id"
+    t.datetime "exif_date"
+    t.string   "exif_exposure_time"
+    t.float    "exif_f_number"
   end
 
   add_index "images", ["gallery_id"], name: "index_images_on_gallery_id"
@@ -67,6 +83,7 @@ ActiveRecord::Schema.define(version: 20151007111828) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.boolean  "public"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"

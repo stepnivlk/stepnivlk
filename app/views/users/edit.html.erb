@@ -6,175 +6,210 @@
         <div class="pfblock-line"></div>
       </div>
 
-<div class="form-area"> 
-  <%= form_for(@user, html: { multipart: true }) do |f| %>
+      <div class="form-area">
+        <%= form_for(@user, html: { multipart: true }) do |f| %>
 
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-        <div class="alert alert-danger">
-          The form contains <%= pluralize(@user.errors.count, "error") %>.
-        </div>
-        <ul>
-          <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+          <%= render 'shared/error_messages', object: f.object %>
+          
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label :name, "Nick:" %>
+                <%= f.text_field :name, class: "form-control" %>
+              </div>
+            </div>
 
-<div class="row">
-  <div class="col-sm-6">
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label :real_name, "Jmeno:" %>
+                <%= f.text_field :real_name, class: "form-control" %>
+              </div>
+            </div>
 
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label :name, "Nick:" %>
-        <%= f.text_field :name, class: "form-control" %>
-      </div>
-    </div>
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label "Email:" %>
+                <%= f.email_field :email, class: 'form-control' %>
+              </div>
+            </div>
 
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label :real_name, "Jmeno:" %>
-        <%= f.text_field :real_name, class: "form-control" %>
-      </div>
-    </div>
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label "Telefon:" %>
+                <%= f.text_field :phone, class: 'form-control' %>
+              </div>
+            </div>
 
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label "Email:" %>
-        <%= f.email_field :email, class: 'form-control' %>
-      </div>
-    </div>
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label :birth_date, "Datum narozeni:" %>
+                <br>
+                <%= f.date_select :birth_date, class: "form-control", start_year: 1950 %>
+              </div>
+            </div>
 
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label "Telefon:" %>
-        <%= f.text_field :phone, class: 'form-control' %>
-      </div>
-    </div>
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label :avatar, "Avatar:" %>
+                <%= f.file_field :avatar %>
+              </div>
+            </div>
 
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label :password, "Heslo:" %>
+                <%= f.password_field :password, class: "form-control" %>
+              </div>
+            </div>
 
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label :birth_date, "Datum narozeni:" %><br>
-        <%= f.date_select :birth_date, class: "form-control", start_year: 1920 %>
-      </div>
-    </div>
+            <div class="form-group">
+              <div class="input-group col-xs-8">
+                <%= f.label :password_confirmation, "Potvrzeni hesla:" %>
+                <%= f.password_field :password_confirmation, class: "form-control" %>
+              </div>
+            </div>
+          </div><!-- /.col-sm-6 -->
 
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-      <%= f.label :avatar, "Avatar:" %>
-    <%= f.file_field :avatar %>
-    </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label :password, "Heslo:" %>
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group col-xs-8">
-        <%= f.label :password_confirmation, "Potvrzeni hesla:" %>
-        <%= f.password_field :password_confirmation, class: "form-control" %>
-      </div>
-    </div>
-
-    </div>
-
-    <div class="col-sm-6">
-        <strong>Kratke info:</strong>
-
-      <%= f.nested_fields_for :simple_user_infos do |i| %>
-        <div class="row">
-        <div class="form-group">
-        <div class="input-group col-md-12">
-          <div class="col-xs-10">
-            <%= i.text_field :info, class: 'form-control' %>
+          <div class="col-sm-6">
+            <strong>Kratke info:</strong>
+            <%= f.nested_fields_for :simple_user_infos do |i| %>
+              <div class="row">
+                <div class="form-group">
+                  <div class="input-group col-md-12">
+                    <div class="col-xs-10">
+                      <%= i.text_field :info, class: 'form-control' %>
+                    </div>
+                    <div class="col-xs-1">
+                      <%= i.remove_nested_fields_link fa_icon("remove") %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+            <%= f.add_nested_fields_link :simple_user_infos, fa_icon("plus") %>
           </div>
-          <div class="col-xs-1">
-            <%= i.remove_nested_fields_link fa_icon("remove") %>
+
+
+          <div class="col-sm-12">
+            <hr>
+            <strong>Kompetence </strong>
+            <div class="row">
+              <div class="col-xs-5">
+                skill:
+              </div>
+              <div class="col-xs-3">
+                skill index:
+              </div>
+              <div class="col-xs-3">
+                in love index:
+              </div>
+            </div>
+
+            <%= f.nested_fields_for :skills do |s| %>
+              <div class="row">
+                <div class="form-group">
+                  <div class="input-group col-md-12 ">
+                    <div class="col-xs-5">
+                      <%= s.text_field :skill, class: 'form-control' %>
+                    </div>
+                    <div class="col-xs-3">
+                      <%= s.range_field :skill_index, min: 0, max: 10, class: "form-control" %>
+                    </div>
+                    <div class="col-xs-3">
+                      <%= s.range_field :in_love_index, min: 0, max: 10, class: "form-control" %>
+                    </div>
+                    <div class="col-xs-1">
+                      <%= s.remove_nested_fields_link fa_icon("remove"), class: "" %>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.row -->
+            <% end %>
+            <%= f.add_nested_fields_link :skills, fa_icon("plus") %>
           </div>
-        </div>
-        </div>
-        </div>
-      <% end %>
-      <%= f.add_nested_fields_link :simple_user_infos, fa_icon("plus") %>
-    </div>
-    </div>
 
-    <hr>
+          <div class="col-sm-12">
+            <hr>
+            <strong>Vzdelani </strong>
+            <%= f.nested_fields_for :educations do |e| %>
 
-        <strong>Kompetence </strong>
-        <div class="row">
-        <div class="col-sm-5">
-        skill:
-        </div>
-        <div class="col-sm-3">
-        skill index:
-        </div>
-        <div class="col-sm-3">
-        in love index:
-        </div>
-        </div>
-      <%= f.nested_fields_for :skills do |s| %>
-    <div class="row">
-        <div class="form-group">
-          <div class="input-group col-md-12 ">
-            <div class="col-xs-5">
-            <%= s.text_field :skill, class: 'form-control' %>
-            </div>
-            <div class="col-xs-3">
-            <%= s.range_field :skill_index, min: 0, max: 10, class: "form-control" %>
-            </div>
-            <div class="col-xs-3">
-            <%= s.range_field :in_love_index, min: 0, max: 10, class: "form-control" %>
-            </div>
-            <div class="col-xs-1">
-            <%= s.remove_nested_fields_link fa_icon("remove"), class: "" %>
-            </div>
+                <div class="form-group">
+                  <div class="input-group col-sm-6">
+                    <div class="col-xs-2">
+                      <%= e.label :start %>
+                      <%= e.date_select :start, discard_day: true, discard_month: true, class: "form-control", start_year: 1980 %>
+                    </div>
+                    <div class="col-xs-2">
+                      <%= e.label :end %>
+                      <%= e.date_select :end, discard_day: true, discard_month: true, class: "form-control", start_year: 1980 %>
+                    </div>
+                    <div class="col-xs-2">
+                    <%= e.remove_nested_fields_link fa_icon("remove"), class: "" %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group col-xs-6">
+                    <%= e.label :name %>
+                    <%= e.text_field :name, class: 'form-control' %>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group col-xs-6">
+                    <%= e.label :body %>
+                    <%= e.text_area :body, cols: "100", rows: "5", class: 'form-control' %>
+                  </div>
+                </div>
+
+
+            <% end %>
+            <%= f.add_nested_fields_link :educations, fa_icon("plus") %>
+                <hr>
           </div>
-        </div>
 
-      <% end %>
-      <%= f.add_nested_fields_link :skills, fa_icon("plus") %>
-    </div>
+          <div class="col-sm-12">
+            <strong>Zkusenosti </strong>
+            <%= f.nested_fields_for :experiences do |ex| %>
+                <div class="form-group">
+                  <div class="input-group col-sm-6">
 
-    <hr>
+                    <div class="col-xs-2">
+                      <%= ex.label :start %>
+                      <%= ex.date_select :start, discard_day: true, discard_month: true, class: "form-control", start_year: 1980 %>
+                    </div>
+                    <div class="col-xs-2">
+                      <%= ex.label :end %>
+                      <%= ex.date_select :end, discard_day: true, discard_month: true, class: "form-control", start_year: 1980, include_blank: true %>
+                    </div>
+                    <div class="col-xs-2">
+                    <%= ex.remove_nested_fields_link fa_icon("remove"), class: "" %>
+                    </div>
+                  </div>
+                </div>
 
-    <strong>Vzdelani </strong>
-    <%= f.nested_fields_for :educations do |e| %>
-      <div class="row">
+                <div class="form-group">
+                  <div class="input-group col-xs-6">
+                    <%= ex.label :name %>
+                    <%= ex.text_field :name, class: 'form-control' %>
+                  </div>
+                </div>
 
-        <div class="col-md-12">
-        <div class="form-group">
-          <div class="input-daterange input-group col-md-6">
-              <%= e.text_field :start, class: ' form-control' %>
-              <span class="input-group-addon">do</span>
-              <%= e.text_field :end, class: 'form-control', id: 'schooldate' %>
-
-            </div>
+                <div class="form-group">
+                  <div class="input-group col-xs-12">
+                    <%= ex.label :body %>
+                    <%= ex.text_area :body, cols: "100", rows: "10", class: 'form-control' %>
+                  </div>
+                </div>
+            <% end %>
+            <%= f.add_nested_fields_link :experiences, fa_icon("plus") %>
+            <hr>
           </div>
-        </div>
-            <div class="col-xs-4">
-              <%= e.text_field :name, class: 'form-control' %> 
-            </div>
 
-            </div> 
+          <%= f.submit 'Odeslat', class: "btn btn-default push-right"  %>
+        <% end %>
       </div>
-    <% end %>
-      <%= f.add_nested_fields_link :educations, fa_icon("plus") %>
-
-
-      <%= f.submit 'Odeslat', class: "btn btn-default push-right"  %>
-
-
-
-  <% end %>
-</div>
-
     </div>
   </div>
 </section>

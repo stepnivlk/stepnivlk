@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1002.4189mm"
+   height="335.83179mm"
+   viewBox="0 0 3551.8782 1189.9551"
+   id="svg4662"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="wolf.svg">
+  <defs
+     id="defs4664" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1902.3676"
+     inkscape:cy="449.26327"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     inkscape:window-x="1280"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4667">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2013.0819,208.32963)">
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:33.02099991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -695.56041,-38.624531 c -418.64399,0.4158 -855.39739,0.3224 -1216.09379,0.3125 l 47.6328,82.5 1020.16609,0 c -38.665,85.063401 -59.0178,177.304401 -59.7383,270.740201 -10e-5,176.8202 70.2407,346.39893 195.2715,471.42968 124.9128,124.91282 294.2899,195.13532 470.9297,195.26762 l 0,0 c 0.083,0 0.1666,0 0.25,0 0.083,0 0.1666,0 0.25,0 l 0,0 c 176.639703,-0.1323 346.0149,-70.3548 470.9277,-195.26762 125.0307,-125.03075 195.2735,-294.60948 195.2734,-471.42968 -0.7205,-93.4358 -21.0732,-185.6768 -59.7382,-270.740201 l 1020.16601,0 47.6328,-82.5 c -360.6963,0.01 -797.44981,0.1033 -1216.09381,-0.3125 6.874,8.5298 13.505,17.2527 19.8848,26.1582 10.9158,15.9554 21.0266,32.4467 30.2949,49.4121 9.2677,16.9647 17.6812,34.3823 25.209,52.1875 7.5284,17.805801 14.1617,35.976901 19.875,54.445301 5.713,18.468 10.4991,37.2101 14.3399,56.1562 3.8403,18.9466 6.7305,38.0733 8.6601,57.3086 1.9298,19.2346 2.8966,38.5536 2.8965,57.8848 5e-4,13.6847 -0.4837,27.3651 -1.4512,41.0156 -1.3675,19.2835 -3.6985,38.4865 -6.9843,57.5371 -3.2858,19.0501 -7.5222,37.9239 -12.6934,56.5508 -5.1711,18.6272 -11.2705,36.9841 -18.2754,55.002 -7.0051,18.0178 -14.907,35.6739 -23.6758,52.9023 -8.7692,17.2288 -18.3944,34.0082 -28.8398,50.2754 -10.4447,16.26701 -21.6964,32.00151 -33.7129,47.14453 -12.0168,15.14291 -24.7835,29.67539 -38.252,43.54297 -13.468,13.86795 -27.621,27.05369 -42.4062,39.50781 -14.7859,12.45326 -30.1853,24.15929 -46.140597,35.07419 -15.9554,10.9158 -32.4467,21.0267 -49.4122,30.295 -16.9647,9.2676 -34.3822001,17.6811 -52.1874,25.2089 -17.8059,7.5285 -35.977,14.1618 -54.4454,19.875 -18.468,5.7131 -37.210103,10.4991 -56.156203,14.3399 -18.9465,3.8403 -38.0733,6.7306 -57.3086,8.6601 -19.1523,1.9216 -38.3884,2.8864 -57.6367,2.8946 -19.2484,-0.01 -38.4845,-0.973 -57.6367,-2.8946 -19.2353,-1.9295 -38.3621,-4.8198 -57.3087,-8.6601 -18.9461,-3.8408 -37.6882,-8.6268 -56.1562,-14.3399 -18.4684,-5.7132 -36.6396,-12.3465 -54.4453,-19.875 -17.8052,-7.5278 -35.2228,-15.9413 -52.1875,-25.2089 -16.9655,-9.2683 -33.4568,-19.3792 -49.4121,-30.295 -15.9553,-10.9149 -31.3547,-22.62093 -46.1406,-35.07419 -14.7852,-12.45412 -28.9383,-25.63986 -42.4063,-39.50781 -13.4685,-13.86758 -26.2351,-28.40006 -38.252,-43.54297 -12.0165,-15.14302 -23.2681,-30.87752 -33.7128,-47.14453 -10.4454,-16.2672 -20.0707,-33.0466 -28.8399,-50.2754 -8.7689,-17.2284 -16.6707,-34.8845 -23.6758,-52.9023 -7.0048,-18.0179 -13.1043,-36.3748 -18.2754,-55.002 -5.1711,-18.6269 -9.4075,-37.5007 -12.6933,-56.5508 -3.2859,-19.0506 -5.6169,-38.2536 -6.9844,-57.5371 -0.9676,-13.6505 -1.4516,-27.3309 -1.4512,-41.0156 0,-19.3312 0.9667,-38.6502 2.8965,-57.8848 1.9296,-19.2353 4.8199,-38.362 8.6602,-57.3086 3.8408,-18.9461 8.6267,-37.6882 14.3398,-56.1562 5.7132,-18.4684 12.3465,-36.6395 19.875,-54.445301 7.5278,-17.8052 15.9413,-35.2228 25.209,-52.1875 9.2683,-16.9654 19.3792,-33.4567 30.2949,-49.4121 6.3798,-8.9055 13.0108,-17.6284 19.8848,-26.1582 z"
+       id="path5989"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:33.02099991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -2013.0819,-206.88433 47.6309,82.5 1228.52339,0 90.9883,0 31.6797,0 c 5.5495,-5.0696 11.197,-10.0309 16.9394,-14.8809 15.143,-12.0165 30.8775,-23.2682 47.1446,-33.7129 16.2672,-10.4454 33.0466,-20.0707 50.2753,-28.8398 4.8202,-2.2371 9.671,-4.4079 14.5508,-6.5117 -524.52859,2.6514 -1074.84499,1.5385 -1527.73239,1.4453 z"
+       id="path5968"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4f6d7a;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 286.36579,314.92947 a 523.25903,523.25903 0 0 1 -523.2591,523.2591 523.25903,523.25903 0 0 1 -523.259,-523.2591 523.25903,523.25903 0 0 1 523.259,-523.259 523.25903,523.25903 0 0 1 523.2591,523.259 z"
+       id="path5072"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208" />
+    <path
+       style="fill:#4d4d4d;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -190.93141,514.93967 c 0,-2.5254 3.0305,-14.6473 3.0305,-14.6473 l 0,-43.9416 -5.0508,-32.3249 -15.6573,-24.2436 -6.566,-30.3046 0,-37.8807 11.1117,-28.7894 -3.0305,-34.8502 -3.5355,-11.1117 -5.0508,-19.1929 -8.5968,-23.7386 -11.4329,-34.4678 4.8774,-8.4995 3.3953,3.6916 8.7266,-0.1202 -6.566,5.0507 11.1116,19.698 3.0305,-36.8706 16.6675,-13.132 17.1726,39.9011 3.5355,4.0406 9.0914,0 19.698,25.7589 9.5964,31.3147 25.2539,20.203 13.131903,13.132 -24.748703,5.5559 15.6574,12.1218 8.081203,17.1726 12.1218,6.566 11.1117,29.2944 18.1827,20.7081 31.3148,25.2538 27.7791999,43.4366 9.5964001,35.8604 2.0203,15.1523 14.1422,29.2944 -133.845303,-1.0101 -3.5355,-17.1726 6.0609,-21.2132 7.071103,-4.0406 -31.819803,-17.1726 -26.264,-21.2132 -10.1015,77.7817 z"
+       id="path5123"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccc"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 90.974793,722.52387 a 523.25903,523.25903 0 0 0 36.689397,-32.23047 523.25903,523.25903 0 0 0 35.127,-37.70703 l -90.619197,0 c -1.9342,0 -3.4922,1.11546 -3.4922,2.5 l 0,64.93945 c 0,1.38454 1.558,2.49805 3.4922,2.49805 l 18.8028,0 z"
+       id="rect4676"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4680"
+       width="7.1527681"
+       height="51.658882"
+       x="81.395874"
+       y="-713.38513"
+       rx="0"
+       ry="0"
+       transform="scale(1,-1)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 101.37709,713.38519 a 523.25903,523.25903 0 0 0 5.5508,-4.875 l 0,-46.7832 -7.152397,0 0,51.6582 1.601597,0 z"
+       id="rect4682"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 118.15249,698.64887 a 523.25903,523.25903 0 0 0 7.1543,-6.28516 l 0,-30.63672 -7.1543,0 0,36.92188 z"
+       id="rect4684"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 136.53139,680.77387 a 523.25903,523.25903 0 0 0 7.1523,-7.67774 l 0,-11.36914 -7.1523,0 0,19.04688 z"
+       id="rect4686"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       id="rect4698"
+       d="m 164.04899,651.05902 a 523.25903,523.25903 0 0 0 30.9219,-40.67575 523.25903,523.25903 0 0 0 17.9394,-29.2617 l -140.738297,0 c -1.9342,0 -3.4922,1.1135 -3.4922,2.498 l 0,64.94141 c 0,1.38454 1.558,2.49804 3.4922,2.49804 l 91.876997,0 z"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <rect
+       ry="0"
+       rx="0"
+       y="-641.9198"
+       x="81.395874"
+       height="51.658882"
+       width="7.1527681"
+       id="rect4702"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4704"
+       width="7.1527681"
+       height="51.658882"
+       x="99.774536"
+       y="-641.9198"
+       rx="0"
+       ry="0"
+       transform="scale(1,-1)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <rect
+       ry="0"
+       rx="0"
+       y="-641.9198"
+       x="118.1532"
+       height="51.658882"
+       width="7.1527681"
+       id="rect4706"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4708"
+       width="7.1527681"
+       height="51.658882"
+       x="136.53186"
+       y="-641.9198"
+       rx="0"
+       ry="0"
+       transform="scale(1,-1)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 170.99619,641.92035 a 523.25903,523.25903 0 0 0 23.9747,-31.53708 523.25903,523.25903 0 0 0 12.3378,-20.1231 l -52.3984,0 0,51.66018 16.0859,0 z"
+       id="rect4710"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <g
+       id="g4850"
+       transform="translate(-1475.4013,1518.9435)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png">
+      <rect
+         transform="scale(1,-1)"
+         ry="2.4991691"
+         rx="3.4914234"
+         y="938.737"
+         x="1218.7919"
+         height="69.938187"
+         width="324.65625"
+         id="rect4852"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="matrix(0.3933822,0,0,-0.3933822,1187.7964,-1174.0687)"
+         id="g4854">
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4856"
+           width="18.182745"
+           height="131.31982"
+           x="111.11678"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="157.83633"
+           height="131.31982"
+           width="18.182745"
+           id="rect4858"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4860"
+           width="18.182745"
+           height="131.31982"
+           x="204.55588"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="251.27545"
+           height="131.31982"
+           width="18.182745"
+           id="rect4862"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4864"
+           width="392.94934"
+           height="131.31982"
+           x="297.995"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+      </g>
+      <circle
+         r="6.556705"
+         transform="scale(1,-1)"
+         cy="973.70593"
+         cx="1502.5186"
+         id="circle4866"
+         style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         r="6.556705"
+         transform="scale(1,-1)"
+         style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4868"
+         cx="1479.6698"
+         cy="973.70593" />
+      <circle
+         r="6.556705"
+         transform="scale(1,-1)"
+         style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4870"
+         cx="1525.3674"
+         cy="973.70593" />
+    </g>
+    <path
+       transform="matrix(0.20251261,0.97927965,-0.97927965,0.20251261,-396.47201,351.60947)"
+       inkscape:transform-center-y="-2.3792366"
+       inkscape:transform-center-x="-0.35362922"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:randomized="-4.1633363e-17"
+       inkscape:rounded="0.08"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.4536954"
+       sodipodi:arg1="0.82537685"
+       sodipodi:r2="9.4378681"
+       sodipodi:r1="31.459558"
+       sodipodi:cy="-557.23273"
+       sodipodi:cx="-49.789581"
+       sodipodi:sides="5"
+       id="path4900"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="star"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       transform="matrix(0.58513537,0.81093563,-0.81093563,0.58513537,-774.36701,297.62027)"
+       inkscape:transform-center-y="1.4106509"
+       inkscape:transform-center-x="1.3158775"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:randomized="-4.1633363e-17"
+       inkscape:rounded="0.08"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.4536954"
+       sodipodi:arg1="0.82537685"
+       sodipodi:r2="9.4378681"
+       sodipodi:r1="31.459558"
+       sodipodi:cy="-557.23273"
+       sodipodi:cx="-49.789581"
+       sodipodi:sides="5"
+       id="path4904"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="star"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       transform="matrix(0.83711684,0.54702413,-0.54702413,0.83711684,-628.82961,869.12277)"
+       inkscape:transform-center-y="1.4958652"
+       inkscape:transform-center-x="-2.2730039"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:randomized="-4.1633363e-17"
+       inkscape:rounded="0.08"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.4536954"
+       sodipodi:arg1="0.82537685"
+       sodipodi:r2="9.4378681"
+       sodipodi:r1="31.459558"
+       sodipodi:cy="-557.23273"
+       sodipodi:cx="-49.789581"
+       sodipodi:sides="5"
+       id="path4908"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="star"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4910"
+       sodipodi:sides="5"
+       sodipodi:cx="-49.789581"
+       sodipodi:cy="-557.23273"
+       sodipodi:r1="31.459558"
+       sodipodi:r2="9.4378681"
+       sodipodi:arg1="0.82537685"
+       sodipodi:arg2="1.4536954"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.08"
+       inkscape:randomized="-4.1633363e-17"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:transform-center-x="1.2693757"
+       inkscape:transform-center-y="-2.51818"
+       transform="matrix(0.3049879,-0.95235622,0.95235622,0.3049879,126.87399,242.64027)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -27.988107,793.99067 A 523.25903,523.25903 0 0 0 0.45519286,781.26215 523.25903,523.25903 0 0 0 45.824393,755.23676 a 523.25903,523.25903 0 0 0 21.084,-15.07617 l 0,-13.60938 c 0,-1.38454 -1.558,-2.5 -3.4922,-2.5 l -317.673903,0 c -1.9342,0 -3.4902,1.11546 -3.4902,2.5 l 0,64.93945 c 0,1.38451 1.556,2.50001 3.4902,2.50001 l 226.269603,0 z"
+       id="rect4933"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <g
+       id="g4935"
+       transform="matrix(0.3933822,0,0,-0.3933822,-288.74401,558.65827)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png">
+      <rect
+         ry="0"
+         rx="0"
+         y="-574.99359"
+         x="111.11678"
+         height="131.31982"
+         width="18.182745"
+         id="rect4937"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4939"
+         width="18.182745"
+         height="131.31982"
+         x="157.83633"
+         y="-574.99359"
+         rx="0"
+         ry="0" />
+      <rect
+         ry="0"
+         rx="0"
+         y="-574.99359"
+         x="204.55588"
+         height="131.31982"
+         width="18.182745"
+         id="rect4941"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4943"
+         width="18.182745"
+         height="131.31982"
+         x="251.27545"
+         y="-574.99359"
+         rx="0"
+         ry="0" />
+      <rect
+         ry="0"
+         rx="0"
+         y="-574.99359"
+         x="297.995"
+         height="131.31982"
+         width="392.94934"
+         id="rect4945"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <circle
+       style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle4947"
+       cx="25.978151"
+       cy="-759.021"
+       transform="scale(1,-1)"
+       r="6.556705"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       cy="-759.021"
+       cx="3.1293967"
+       id="circle4949"
+       style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)"
+       r="6.556705"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 42.562693,757.10785 a 523.25903,523.25903 0 0 0 3.2617,-1.87109 523.25903,523.25903 0 0 0 3.7988,-2.7168 6.556705,6.556705 0 0 0 -0.7969,-0.0566 6.556705,6.556705 0 0 0 -6.2636,4.64453 z"
+       id="circle4951"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <g
+       transform="translate(-1476.5404,1661.2616)"
+       id="g4953"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png">
+      <rect
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4955"
+         width="324.65625"
+         height="69.938187"
+         x="1218.7919"
+         y="938.737"
+         rx="3.4914234"
+         ry="2.4991691"
+         transform="scale(1,-1)" />
+      <g
+         id="g4957"
+         transform="matrix(0.3933822,0,0,-0.3933822,1187.7964,-1174.0687)">
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="111.11678"
+           height="131.31982"
+           width="18.182745"
+           id="rect4959"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4961"
+           width="18.182745"
+           height="131.31982"
+           x="157.83633"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="204.55588"
+           height="131.31982"
+           width="18.182745"
+           id="rect4963"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4965"
+           width="18.182745"
+           height="131.31982"
+           x="251.27545"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="297.995"
+           height="131.31982"
+           width="392.94934"
+           id="rect4967"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+      <circle
+         style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4969"
+         cx="1502.5186"
+         cy="973.70593"
+         transform="scale(1,-1)"
+         r="6.556705" />
+      <circle
+         cy="973.70593"
+         cx="1479.6698"
+         id="circle4971"
+         style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="scale(1,-1)"
+         r="6.556705" />
+      <circle
+         cy="973.70593"
+         cx="1525.3674"
+         id="circle4973"
+         style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="scale(1,-1)"
+         r="6.556705" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -564.27331,722.52387 301.6895,0 c 0.9671,0 1.8396,-0.27875 2.4707,-0.73047 0.3155,-0.22586 0.5718,-0.49377 0.748,-0.79297 0.1762,-0.2992 0.2735,-0.62848 0.2735,-0.97461 l 0,-64.93945 c 0,-0.34614 -0.097,-0.67542 -0.2735,-0.97461 -0.1762,-0.2992 -0.4325,-0.56906 -0.748,-0.79492 -0.6311,-0.45173 -1.5036,-0.73047 -2.4707,-0.73047 l -317.6739,0 c -0.9671,0 -1.8396,0.27874 -2.4707,0.73047 -0.3155,0.22586 -0.5699,0.49572 -0.7461,0.79492 -0.1762,0.29919 -0.2734,0.62847 -0.2734,0.97461 l 0,50.96093 a 523.25903,523.25903 0 0 0 19.4746,16.47657 z"
+       id="path5574"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <g
+       id="g4975"
+       transform="translate(-1476.5404,1589.7963)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png">
+      <rect
+         transform="scale(1,-1)"
+         ry="2.4991691"
+         rx="3.4914234"
+         y="938.737"
+         x="1218.7919"
+         height="69.938187"
+         width="324.65625"
+         id="rect4977"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="matrix(0.3933822,0,0,-0.3933822,1187.7964,-1174.0687)"
+         id="g4979">
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4981"
+           width="18.182745"
+           height="131.31982"
+           x="111.11678"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="157.83633"
+           height="131.31982"
+           width="18.182745"
+           id="rect4983"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4985"
+           width="18.182745"
+           height="131.31982"
+           x="204.55588"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+        <rect
+           ry="0"
+           rx="0"
+           y="-574.99359"
+           x="251.27545"
+           height="131.31982"
+           width="18.182745"
+           id="rect4987"
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4989"
+           width="392.94934"
+           height="131.31982"
+           x="297.995"
+           y="-574.99359"
+           rx="0"
+           ry="0" />
+      </g>
+      <circle
+         r="6.556705"
+         transform="scale(1,-1)"
+         cy="973.70593"
+         cx="1502.5186"
+         id="circle4991"
+         style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         r="6.556705"
+         transform="scale(1,-1)"
+         style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4993"
+         cx="1479.6698"
+         cy="973.70593" />
+      <circle
+         r="6.556705"
+         transform="scale(1,-1)"
+         style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4995"
+         cx="1525.3674"
+         cy="973.70593" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -562.26551,724.05121 a 523.25903,523.25903 0 0 0 29.918,22.74219 523.25903,523.25903 0 0 0 44.5898,27.33984 523.25903,523.25903 0 0 0 41.1094,19.85743 l 184.0645,0 c 1.9342,0 3.4922,-1.1155 3.4922,-2.50001 l 0,-64.93945 c 0,-1.38454 -1.558,-2.5 -3.4922,-2.5 l -299.6817,0 z"
+       id="rect4999"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -550.24011,733.19184 a 523.25903,523.25903 0 0 0 4.7383,3.60156 l 0,-3.60156 -4.7383,0 z"
+       id="rect5005"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -534.27531,745.32855 a 523.25903,523.25903 0 0 0 1.9278,1.46485 523.25903,523.25903 0 0 0 5.2246,3.20312 l 0,-16.80468 -7.1524,0 0,12.13671 z"
+       id="rect5007"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -515.89631,756.87934 a 523.25903,523.25903 0 0 0 7.1523,4.38671 l 0,-28.07421 -7.1523,0 0,23.6875 z"
+       id="rect5009"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -497.51741,768.14887 a 523.25903,523.25903 0 0 0 9.7597,5.98437 523.25903,523.25903 0 0 0 22.1856,10.7168 l 122.6328,0 0,-51.6582 -154.5781,0 0,34.95703 z"
+       id="rect5011"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       r="6.556705"
+       transform="scale(1,-1)"
+       cy="-759.021"
+       cx="-300.02185"
+       id="circle5013"
+       style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       r="6.556705"
+       transform="scale(1,-1)"
+       style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle5015"
+       cx="-322.87061"
+       cy="-759.021"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       r="6.556705"
+       transform="scale(1,-1)"
+       style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle5017"
+       cx="-277.17297"
+       cy="-759.021"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 68.679793,738.89301 a 523.25903,523.25903 0 0 0 19.6895,-14.08008 523.25903,523.25903 0 0 0 0.8672,-0.76172 l -17.0645,0 c -1.9342,0 -3.4922,1.11546 -3.4922,2.5 l 0,12.3418 z"
+       id="rect4654"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <g
+       id="g5023"
+       transform="matrix(0.3933822,0,0,-0.3933822,-614.74401,487.19287)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png">
+      <rect
+         ry="0"
+         rx="0"
+         y="-574.99359"
+         x="111.11678"
+         height="131.31982"
+         width="18.182745"
+         id="rect5025"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5027"
+         width="18.182745"
+         height="131.31982"
+         x="157.83633"
+         y="-574.99359"
+         rx="0"
+         ry="0" />
+      <rect
+         ry="0"
+         rx="0"
+         y="-574.99359"
+         x="204.55588"
+         height="131.31982"
+         width="18.182745"
+         id="rect5029"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5031"
+         width="18.182745"
+         height="131.31982"
+         x="251.27545"
+         y="-574.99359"
+         rx="0"
+         ry="0" />
+      <rect
+         ry="0"
+         rx="0"
+         y="-574.99359"
+         x="297.995"
+         height="131.31982"
+         width="392.94934"
+         id="rect5033"
+         style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <circle
+       style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle5035"
+       cx="-300.02185"
+       cy="-687.5556"
+       transform="scale(1,-1)"
+       r="6.556705"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       cy="-687.5556"
+       cx="-322.87061"
+       id="circle5037"
+       style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)"
+       r="6.556705"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       cy="-687.5556"
+       cx="-277.17297"
+       id="circle5039"
+       style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)"
+       r="6.556705"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       transform="matrix(0.39506247,0.91865426,-0.91865426,0.39506247,-1090.4152,459.83137)"
+       inkscape:transform-center-y="-0.57171167"
+       inkscape:transform-center-x="1.4813457"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:randomized="-4.1633363e-17"
+       inkscape:rounded="0.08"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.4536954"
+       sodipodi:arg1="0.82537685"
+       sodipodi:r2="9.4378681"
+       sodipodi:r1="31.459558"
+       sodipodi:cy="-557.23273"
+       sodipodi:cx="-49.789581"
+       sodipodi:sides="5"
+       id="path5041"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="star"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5043"
+       sodipodi:sides="5"
+       sodipodi:cx="-49.789581"
+       sodipodi:cy="-557.23273"
+       sodipodi:r1="31.459558"
+       sodipodi:r2="9.4378681"
+       sodipodi:arg1="0.82537685"
+       sodipodi:arg2="1.4536954"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.08"
+       inkscape:randomized="-4.1633363e-17"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:transform-center-x="1.4813457"
+       inkscape:transform-center-y="-0.57171167"
+       transform="matrix(0.39506247,0.91865426,-0.91865426,0.39506247,-322.69931,712.36951)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       transform="matrix(0.56768536,0.82324561,-0.82324561,0.56768536,-1097.2698,650.1568)"
+       inkscape:transform-center-y="1.2187437"
+       inkscape:transform-center-x="1.5238434"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:randomized="-4.1633363e-17"
+       inkscape:rounded="0.08"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.4536954"
+       sodipodi:arg1="0.82537685"
+       sodipodi:r2="9.4378681"
+       sodipodi:r1="31.459558"
+       sodipodi:cy="-557.23273"
+       sodipodi:cx="-49.789581"
+       sodipodi:sides="5"
+       id="path5045"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="star"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5047"
+       sodipodi:sides="5"
+       sodipodi:cx="-49.789581"
+       sodipodi:cy="-557.23273"
+       sodipodi:r1="31.459558"
+       sodipodi:r2="9.4378681"
+       sodipodi:arg1="0.82537685"
+       sodipodi:arg2="1.4536954"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.08"
+       inkscape:randomized="-4.1633363e-17"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:transform-center-x="1.5238434"
+       inkscape:transform-center-y="1.2187437"
+       transform="matrix(0.56768536,0.82324561,-0.82324561,0.56768536,-1036.6607,761.27358)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5049"
+       sodipodi:sides="5"
+       sodipodi:cx="-49.789581"
+       sodipodi:cy="-557.23273"
+       sodipodi:r1="31.459558"
+       sodipodi:r2="9.4378681"
+       sodipodi:arg1="0.82537685"
+       sodipodi:arg2="1.4536954"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.08"
+       inkscape:randomized="-4.1633363e-17"
+       d="m -28.451189,-534.11614 c -1.437951,1.32734 -18.292215,-13.97199 -20.235733,-13.74335 -1.943518,0.22863 -14.787192,19.0216 -16.493919,18.0642 -1.706726,-0.9574 7.635549,-21.71451 6.817526,-23.49226 -0.818024,-1.77774 -22.660117,-8.18545 -22.27698,-10.1045 0.383136,-1.91905 23.011244,0.55168 24.449196,-0.77566 1.437951,-1.32733 0.78247,-24.08049 2.725987,-24.30913 1.943518,-0.22863 6.586182,22.05548 8.292909,23.01288 1.706726,0.9574 23.143709,-6.69711 23.961733,-4.91936 0.818024,1.77774 -18.94076,13.07934 -19.323897,14.99839 -0.383136,1.91905 13.52113,19.94146 12.083178,21.26879 z"
+       inkscape:transform-center-x="1.3158775"
+       inkscape:transform-center-y="1.4106509"
+       transform="matrix(0.58513537,0.81093563,-0.81093563,0.58513537,-487.48371,336.00607)"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -257.74791,837.14497 a 523.25903,523.25903 0 0 0 20.8555,1.043 523.25903,523.25903 0 0 0 37.0136,-1.3106 523.25903,523.25903 0 0 0 51.9219,-6.3027 523.25903,523.25903 0 0 0 51.035203,-11.4551 523.25903,523.25903 0 0 0 49.6347,-16.4922 523.25903,523.25903 0 0 0 17.5665,-7.8613 l -224.537203,0 c -1.9342,0 -3.4902,1.1154 -3.4902,2.5 l 0,39.8789 z"
+       id="rect5081"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -245.03311,837.77977 a 523.25903,523.25903 0 0 0 7.1524,0.3593 l 0,-34.2324 -7.1524,0 0,33.8731 z"
+       id="rect5085"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -226.65411,837.82467 a 523.25903,523.25903 0 0 0 7.1523,-0.252 l 0,-33.666 -7.1523,0 0,33.918 z"
+       id="rect5087"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -208.27521,837.17427 a 523.25903,523.25903 0 0 0 7.1523,-0.252 l 0,-33.0156 -7.1523,0 0,33.2676 z"
+       id="rect5089"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -189.89631,835.66647 a 523.25903,523.25903 0 0 0 7.1523,-0.8692 l 0,-30.8906 -7.1523,0 0,31.7598 z"
+       id="rect5091"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -171.51741,833.43397 a 523.25903,523.25903 0 0 0 23.5605,-2.8593 523.25903,523.25903 0 0 0 51.035203,-11.4551 523.25903,523.25903 0 0 0 45.7851,-15.2129 l -120.380803,0 0,29.5273 z"
+       id="rect5093"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -445.04281,794.76607 a 523.25903,523.25903 0 0 0 4.3828,2.1172 523.25903,523.25903 0 0 0 49.1328,17.9355 523.25903,523.25903 0 0 0 50.6777,12.9395 523.25903,523.25903 0 0 0 51.7168,7.8164 523.25903,523.25903 0 0 0 28.8985,1.4453 l 0,-39.7539 c 0,-1.3846 -1.558,-2.5 -3.4922,-2.5 l -181.3164,0 z"
+       id="rect5103"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -421.41981,803.90667 a 523.25903,523.25903 0 0 0 29.8926,10.9121 523.25903,523.25903 0 0 0 47.4453,12.1133 l 0,-23.0254 -77.3379,0 z"
+       id="rect5115"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#ffd42a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -306.91591,832.88717 a 523.25903,523.25903 0 0 0 10.3028,1.5566 6.556705,6.556705 0 0 0 2.0058,-4.709 6.556705,6.556705 0 0 0 -6.5566,-6.5566 6.556705,6.556705 0 0 0 -6.5566,6.5566 6.556705,6.556705 0 0 0 0.8046,3.1524 z"
+       id="circle5117"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;fill:#ff2a2a;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -330.55651,829.31487 a 523.25903,523.25903 0 0 0 12.9121,1.9512 6.556705,6.556705 0 0 0 0.1875,-1.5313 6.556705,6.556705 0 0 0 -6.5566,-6.5566 6.556705,6.556705 0 0 0 -6.543,6.1367 z"
+       id="circle5119"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <circle
+       cy="-829.73529"
+       cx="-278.31592"
+       id="circle5121"
+       style="opacity:1;fill:#66ff00;fill-opacity:0.5098038;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(1,-1)"
+       r="6.556705"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+    <path
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:connector-curvature="0"
+       id="path5995"
+       d="m 1538.7962,-206.88433 -47.6309,82.5 -1228.52341,0 -90.9883,0 -31.6797,0 c -5.5495,-5.0696 -11.1971,-10.0309 -16.9395,-14.8809 -15.143,-12.0165 -30.877497,-23.2682 -47.144497,-33.7129 -16.2672,-10.4454 -33.0466,-20.0707 -50.2754,-28.8398 -4.8202,-2.2371 -9.6709,-4.4079 -14.5508,-6.5117 524.528597,2.6514 1074.845107,1.5385 1527.732507,1.4453 z"
+       style="opacity:1;fill:#dd6e42;fill-opacity:1;stroke:none;stroke-width:33.02099991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-xdpi="15.127208"
+       inkscape:export-ydpi="15.127208"
+       inkscape:export-filename="/home/hex/Development/stepnivlk/app/assets/images/wolf-section-pdf.png" />
+  </g>
+</svg>

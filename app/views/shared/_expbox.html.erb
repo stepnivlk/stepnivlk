@@ -1,0 +1,31 @@
+<div class="box">
+  <div class="box-title">
+    <h4>Vzdělání a zkušenosti</h4> 
+    <div class="pfblock-line"></div>
+  </div>
+  <div class="box-content">
+    <% @educations.each do |e| %>
+      <div class="row">
+        <div class="col-sm-4 text-center">
+            <%= year_or_default(e.start) + " - " + year_or_default(e.end) %>
+        </div>
+        <div class="col-sm-8 box-maininfo">
+        <h5><%= e.name %></h5>
+        <%= e.body %>
+        </div>
+      </div>
+      <% end %>
+    <hr>
+    <% @experiences.each do |ex| %>
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <%= year_or_default(ex.start) + " - " + year_or_default(ex.end) %>
+        </div>
+        <div class="col-sm-8 box-maininfo">
+          <h5><%= ex.name %></h5>
+          <%= markdown ex.body %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

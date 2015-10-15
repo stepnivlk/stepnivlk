@@ -4,6 +4,14 @@ class UsersController < ApplicationController
 
   def show
     @simple_user_infos = @user.simple_user_infos
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = CvPdf.new(@user)
+        send_data pdf.render, filename: "#{I18n.transliterate(@user.real_name).gsub(" ", "_").downcase}_cv_#{Time.now.strftime("%Y%m%d")}.pdf", type: 'application/pdf'
+      end
+    end
   end
 
   def new
@@ -39,7 +47,8 @@ class UsersController < ApplicationController
               :birth_date, :real_name, :phone, :admin,
               simple_user_infos_attributes: [:info, :_destroy, :id],
               skills_attributes: [:skill, :skill_index, :in_love_index, :_destroy, :id],
-              educations_attributes: [:start, :end, :name, :body, :_destroy, :id])
+              educations_attributes: [:start, :end, :name, :body, :_destroy, :id],
+              experiences_attributes: [:start, :end, :name, :body, :_destroy, :id])
     end
 
     def find_user

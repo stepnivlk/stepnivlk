@@ -2,16 +2,7 @@
   <div class="form-area"> 
     <%= form_for(@image, url: gallery_image_path(@image.gallery_id, @image), html: { multipart: true }) do |f| %>
 
-      <% if @image.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
-          <ul>
-          <% @image.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <div class="field">
         <%= f.label :name %><br />

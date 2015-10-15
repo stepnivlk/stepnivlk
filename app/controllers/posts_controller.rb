@@ -14,10 +14,9 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = "Your post was successfully saved"
+      flash[:success] = "Váš příspěvek byl úspěšně uložen."
       redirect_to @post
     else
-      flash.now[:warning] = "Unable to save your post"
       render 'new'
     end
   end
@@ -32,10 +31,9 @@ class PostsController < ApplicationController
 
   def update
     if @post.update post_params
-      flash[:success] = "Your post was successfully saved"
+      flash[:success] = "Váš příspěvek byl úspěšně uložen."
       redirect_to @post
     else
-      flash.now[:warning] = "Unable to save your post"
       render 'edit'
     end
   end
@@ -48,7 +46,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :content, :tag_list)
+      params.require(:post).permit(:title, :content, :tag_list, :public)
     end
 
     def find_post
@@ -57,7 +55,7 @@ class PostsController < ApplicationController
 
     def correct_user
       unless @post.user == current_user || current_user.admin
-        flash[:danger] = "You don't have rights to perform this operation."
+        flash[:danger] = "Nemáte oprávnění k provedení této operace."
         redirect_to(posts_path(anchor: "firstinfo"))
       end
     end

@@ -1,18 +1,7 @@
 <div class="form-area"> 
   <%= form_for(@post, html: { multipart: true }) do |f| %>
 
-    <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <div class="alert alert-danger">
-          The form contains <%= pluralize(@post.errors.count, "error") %>.
-        </div>
-        <ul>
-          <% @post.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= render 'shared/error_messages', object: f.object %>
 
     <div class="form-group">
       <div class="input-group col-xs-4">
@@ -34,6 +23,14 @@
         <%= f.text_field :tag_list, class: "form-control" %>
       </div>
     </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <%= f.label :public %>
+        <%= f.check_box :public, class: "form-control" %>
+      </div>
+    </div>
+
 
       <%= f.submit 'Odeslat', class: "btn btn-default"  %>
 

@@ -7,6 +7,9 @@ class HomeController < ApplicationController
     @user = User.find(1)
     @simple_user_infos = @user.simple_user_infos
     @skills = @user.skills
+    @educations = @user.educations
+    @experiences = @user.experiences
+    @message = Message.new
   end
 
   private
