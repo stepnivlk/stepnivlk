@@ -4,7 +4,11 @@ class GalleriesController < ApplicationController
   before_action :correct_user, only: :destroy
 
   def index
-    @galleries = Gallery.all.order("created_at desc")
+    if logged_in? 
+      @galleries = Gallery.all.order("created_at desc")
+    else
+      @galleries = Gallery.where(public: true).order("created_at desc")
+    end
   end
 
   def new
@@ -18,10 +22,10 @@ class GalleriesController < ApplicationController
       if params[:images]
         params[:images].each { |image| @gallery.images.create(file: image)}
       end
-      flash[:success] = "Your gallery was successfully saved"
+      flash[:success] = "Vaše galerie byla úspěšně uložena."
       redirect_to @gallery
     else
-      flash.now[:warning] = "Unable to save your gallery"
+      flash.now[:warning] = "Vaše galerie nebyla uložena, zkuste to znovu."
       render 'new'
     end
   end
@@ -37,7 +41,7 @@ class GalleriesController < ApplicationController
   private
 
     def gallery_params
-      params.require(:gallery).permit(:name, :description, :images)
+      params.require(:gallery).permit(:name, :description, :images, :public)
     end
 
     def find_gallery
@@ -46,7 +50,7 @@ class GalleriesController < ApplicationController
 
     def correct_user
       unless @gallery.user == current_user || current_user.admin
-        flash[:danger] = "You don't have rights to perform this operation."
+        flash[:danger] = "Nemáte oprávnění k provedení této operace."
         redirect_to(galleries_path)
       end
     end

@@ -48,4 +48,9 @@ module ApplicationHelper
     return date.strftime("%Y") if date
     return default
   end
+
+  def active_page(path)
+  "active" if request.url.include?(path)
+end
+
 end

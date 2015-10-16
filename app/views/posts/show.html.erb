@@ -21,7 +21,9 @@
             <% @post.tags.each do |tag| %>
               <div class="btn-group" role="group" aria-label="...">
                 <%= link_to tag.name, tag_path(tag), class: "tag btn btn-tag" %>
-                <%= link_to fa_icon("remove"), tag_path(tag), class: "tag btn btn-default btn-tag-delete", method: :delete, data: {confirm: "Really delete the tag?"} %>
+                <% if (logged_in? && (current_user == @post.user)) || logged_in_admin? %>
+                  <%= link_to fa_icon("remove"), tag_path(tag), class: "tag btn btn-default btn-tag-delete", method: :delete, data: {confirm: "Really delete the tag?"} %>
+                <% end %>
               </div>
             <% end %>
           </div>

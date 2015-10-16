@@ -17,12 +17,9 @@
       <div class="collapse navbar-collapse" id="custom-collapse">
         <ul class="nav navbar-nav navbar-right">
           <%= content_tag :li, link_to("Domů", root_path(anchor: "firstinfo")), class: ("active" if current_page?(root_path))  %>
-          <%= content_tag :li, link_to("Nástěnka", tags_path), class: ("active" if current_page?(tags_path))  %>
-          <%= content_tag :li, link_to("Blog", posts_path), class: ("active" if current_page?(posts_path))  %>
-          <%= content_tag :li, link_to("Galerie", galleries_path), class: ("active" if current_page?(galleries_path))  %>
-   
-
-          <li><a href="#contact">Kontakt</a></li>
+          <%= content_tag :li, link_to("Nástěnka", stream_path), class: active_page(stream_path)  %>
+          <%= content_tag :li, link_to("Blog", posts_path), class: active_page(posts_path)  %>
+          <%= content_tag :li, link_to("Galerie", galleries_path), class: active_page(galleries_path)  %>
 
           <% if logged_in? %>
             <li class="dropdown">

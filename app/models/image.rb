@@ -30,8 +30,8 @@ class Image < ActiveRecord::Base
   def add_exif
     exif = EXIFR::JPEG.new(file.queued_for_write[:original].path)
     return unless exif
-    self.exif_date = exif.date_time.to_date
-    self.exif_exposure_time = exif.exposure_time.to_s
-    self.exif_f_number = exif.f_number.to_f
+    self.exif_date = exif.date_time.to_date if exif.date_time
+    self.exif_exposure_time = exif.exposure_time.to_s if exif.exposure_time
+    self.exif_f_number = exif.f_number.to_f if exif.f_number
   end
 end

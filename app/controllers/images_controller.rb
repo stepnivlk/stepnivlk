@@ -25,7 +25,7 @@ class ImagesController < ApplicationController
 
   def update
     if @image.update image_params
-      flash[:success] = "Image succesfully updated."
+      flash[:success] = "Obrázek byl úspěšně aktualizován."
       redirect_to gallery_image_path(@image.gallery, @image)
     else
       render 'edit'
@@ -35,7 +35,7 @@ class ImagesController < ApplicationController
   # fix if not destroyed
   def destroy
     @image.destroy
-    flash[:danger] = "Image deleted."
+    flash[:danger] = "Obrázek byl smazán."
     redirect_to gallery_path(@image.gallery)
   end
 
@@ -51,7 +51,7 @@ class ImagesController < ApplicationController
 
     def correct_user
       unless @image.gallery.user == current_user || current_user.admin
-        flash[:danger] = "You don't have rights to perform this operation."
+        flash[:danger] = "Nemáte oprávnění k provedení této operace."
         redirect_to(gallery_image_path(@image.gallery, @image))
       end
     end

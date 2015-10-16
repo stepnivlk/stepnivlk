@@ -23,8 +23,10 @@
       </ul>
 
       <div class="userbox-links">
-        <button class="btn btn-default">GitHub</button>
-        <button class="btn btn-default">Stahnout .PDF</button>
+        <a href="https://github.com/stepnivlk", target="_blank"><button class="btn btn-default"><%= fa_icon "github-alt" %> GitHub</button></a>
+        <%= link_to user_path(@user, format: :pdf) do %> 
+          <button class="btn btn-default"><%= fa_icon "download" %> CV.PDF</button>
+        <% end %>
         <% if (logged_in? && (current_user == @user)) || logged_in_admin? %>
           <%= link_to fa_icon("wrench"), edit_user_path(@user) %>
         <% end %>

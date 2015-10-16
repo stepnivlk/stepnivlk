@@ -51,10 +51,12 @@ class CvPdf < Prawn::Document
 
     bounding_box([260, y_position], width: 220, height: 100) do
       #sstroke_bounds
-      text @user.simple_user_infos.find(1).info, size: 12
-      text @user.simple_user_infos.find(2).info, size: 12
-      text @user.simple_user_infos.find(3).info, size: 12
-      move_down 10
+      if @user.simple_user_infos.any?
+        text @user.simple_user_infos.find(1).info, size: 12
+        text @user.simple_user_infos.find(2).info, size: 12
+        text @user.simple_user_infos.find(3).info, size: 12
+        move_down 10
+      end
       text "středoškolské", size: 12
       text "české", size: 12
 

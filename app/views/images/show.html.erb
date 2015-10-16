@@ -22,9 +22,10 @@
             </div>
             <div class="col-sm-8 iconbox-title">
               <h4 class=""><%= @image.file_file_name %> </h4> 
-
-              <%= link_to fa_icon("wrench"), edit_gallery_image_path(@image.gallery_id, @image) %> |
-              <%= link_to fa_icon("remove"), gallery_image_path(@image.gallery, @image), method: :delete, data: { confirm: "Are you sure ?"} %> 
+              <% if (logged_in? && (current_user == @image.gallery.user)) || logged_in_admin? %>
+                <%= link_to fa_icon("wrench"), edit_gallery_image_path(@image.gallery_id, @image) %> |
+                <%= link_to fa_icon("remove"), gallery_image_path(@image.gallery, @image), method: :delete, data: { confirm: "Are you sure ?"} %> 
+              <% end %>
 
             </div>
             <div class="col-sm-2 text-right">

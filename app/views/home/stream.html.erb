@@ -1,0 +1,17 @@
+ <section id="" class="">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+        <ol class="breadcrumb">
+          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li class="active"><%= "Nástěnka" %></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row stream">
+      <%= render partial: 'shared/stream', collection: @streams %>
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section>

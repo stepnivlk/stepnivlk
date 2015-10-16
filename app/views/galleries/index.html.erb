@@ -46,8 +46,10 @@
         </div>
         <div class="row">
         <div class="col-sm-6 text-left">
-        <%= link_to fa_icon("wrench"), edit_gallery_path(gallery) %> |
-        <%= link_to fa_icon("remove"), gallery, data: { confirm: "Are you sure?" }, method: :delete %>
+          <% if (logged_in? && (current_user == gallery.user)) || logged_in_admin? %>
+            <%= link_to fa_icon("wrench"), edit_gallery_path(gallery) %> |
+            <%= link_to fa_icon("remove"), gallery, data: { confirm: "Are you sure?" }, method: :delete %>
+          <% end %>
         </div>
         <div class="col-sm-6 text-right">
           <%= link_to gallery.user do %>

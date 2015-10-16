@@ -108,33 +108,8 @@
     </div>
 
     <div class="row stream">
-      <% @stream.each do |post| %>    
-        <% if post.identity == "post" %>
-          <div class="item">
-            <%= link_to post_path(post) do %>
-              <div class="postbox">
-                <div class="box-title">
-                  <h4><%= post.title %></h4>
-                </div>
-                <p><%= strip_tags(markdown post.content.truncate(200)) %></p>
-              </div>
-            <% end %>
-          </div><!-- ./item -->
-        <% elsif post.identity == "gallery" %>
-          <div class="item">
-            <%= link_to gallery_path(post) do %>
-              <div class="photobox">
-                <% post.random_images(1).each do |image| %>
-                  <%= image_tag(image.file.url(:thumb)) %>
-                <% end %>
-                <div class="box-title">
-                  <h4><%= post.name %></h4>
-                </div>
-              </div>
-            <% end %>
-          </div><!-- ./item -->
-        <% end %>
-      <% end %><!-- ./@stream.each -->
+      <%= render partial: 'shared/stream', collection: @streams %>
+
     </div><!-- .row -->
   </div><!-- .container -->
 </section>

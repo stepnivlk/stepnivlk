@@ -1,7 +1,7 @@
 class TagsController < ApplicationController
   skip_before_action :logged_in_user, only: [:index, :show]
   before_action :find_tag, only: [:show, :destroy]
-  before_action :correct_user, only: :destroy
+  before_action :correct_user, only: [:index, :destroy]
 
   def index
     @tags = Tag.all
@@ -31,7 +31,7 @@ class TagsController < ApplicationController
 
     def correct_user
       unless current_user.admin
-        flash[:danger] = "You don't have rights to perform this operation."
+        flash[:danger] = "Nemáte oprávnění k provedení této operace."
         redirect_to(:back)
       end
     end
