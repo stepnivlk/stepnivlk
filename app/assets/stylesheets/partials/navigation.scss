@@ -69,3 +69,21 @@
   background: #222;
 }
 /*** /navigation ***/
+
+
+.pagination {
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  padding: 1em;
+  cursor: default; }
+  .pagination a, .pagination span {
+    padding: 0.2em 0.3em; }
+  .pagination .disabled {
+    color: $gray-light; }
+  .pagination .current {
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+}

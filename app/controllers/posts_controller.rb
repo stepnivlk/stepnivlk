@@ -22,11 +22,14 @@ class PostsController < ApplicationController
   end
 
   def show
+    # only correct user can see non-public post.
     unless @post.public
       correct_user
     end
+    # Used for new comment form.
     @comment = @post.comments.build
-    @comments = @post.comments
+    # All comments associated to post with pagination.
+    @comments = @post.comments.order("created_at DESC").paginate(page: params[:page], per_page: 10)
   end
 
   def edit
@@ -56,10 +59,11 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
+    # Checks if current user is author, or admin, if not redirects.
     def correct_user
       unless @post.user == current_user || logged_in_admin?
         flash[:danger] = "Nemáte oprávnění k provedení této operace."
-        redirect_to(posts_path(anchor: "firstinfo"))
+        redirect_to posts_path 
       end
     end
 end

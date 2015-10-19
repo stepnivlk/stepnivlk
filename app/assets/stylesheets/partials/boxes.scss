@@ -11,7 +11,6 @@
     text-align: center
 }
 
-
 .box-image {
   padding: 0;
 }
@@ -63,15 +62,15 @@
 
 
 .userbox img {
-    width: 260px;
-    height: 260px;
-    max-width: 260px;
-    max-height: 260px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 4px solid rgba(79, 109, 122, 0.2);
-  }
+  width: 260px;
+  height: 260px;
+  max-width: 260px;
+  max-height: 260px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 4px solid rgba(79, 109, 122, 0.2);
+}
 
 #skillbox, #expbox {
   min-height: 528px;
@@ -80,6 +79,7 @@
 #contactbox {
   min-height: 358px;
 }
+
 /* appends to row around content sream
    resizes it */
 .stream {
@@ -132,13 +132,6 @@
     box-shadow: 0px 0px 12px 0px rgba(192,214,223,1);
   }
 }
-
-
-
-
-
-
-
 
 .image_thumb {
   padding: 0px;

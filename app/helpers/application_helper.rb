@@ -44,16 +44,19 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
 
+  # Returns formated date, or default value.
+  #
+  # date - some date, which will be formated
+  # default - returned value, if date doesn't exist.
   def year_or_default(date, default="nyní")
     return date.strftime("%Y") if date
     return default
   end
 
+  # Returns "active" if request include given path, works for nesteds paths.
+  #
+  # path - path which will be tested.
   def active_page(path)
-  "active" if request.url.include?(path)
-  end
-
-  def private_object(object)
-    "private" unless object.public
+    "active" if request.url.include?(path)
   end
 end

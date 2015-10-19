@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
 
+    # Recaptcha for test for real user.
     if verify_recaptcha
       if @comment.save
         flash[:success] = "Komentář přidán."
@@ -38,7 +39,7 @@ private
   def correct_user
     unless current_user.admin
       flash[:danger] = "Nemáte oprávnění k provedení této operace."
-      redirect_to(post_path(@post))
+      redirect_to post_path(@post)
     end
   end
 end

@@ -22,10 +22,12 @@ module SessionsHelper
     end
   end
 
+  # Returns true if some user is logged.
   def logged_in?
     !current_user.nil?
   end
 
+  # Returns true if logged in user is admin.
   def logged_in_admin?
     logged_in? && current_user.admin
   end
@@ -42,13 +44,20 @@ module SessionsHelper
     @current_user = nil
   end
 
-  def scoped_index(model)
-  if logged_in? 
-    @contents = model.where(:user_id == current_user.id).order("created_at DESC")
-  elsif logged_in_admin?
-    @contents = model.order("created_at DESC").all
-  else
-    @contents = model.where(public: true).order("created_at desc")
+  # Returns model objects based on current user rights with optional pagination.
+  #
+  # model    - Right model, has to have user_id and public fields.
+  # paginate - If set, use pagination. Default = true.
+  # per_page - No. of objects per page. Default = 10.
+  def scoped_index(model, paginate = true, per_page = 10)
+    if logged_in? 
+      @contents = model.where(:user_id == current_user.id).order("created_at DESC")
+    elsif logged_in_admin?
+      @contents = model.order("created_at DESC")
+    else
+      @contents = model.where(public: true).order("created_at DESC")
+    end
+    return @contents unless paginate
+    @contents = @contents.paginate(page: params[:page], per_page: per_page)
   end
-end
 end
