@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 
   private
     def content_sorted(count=nil)
-      sorted = (Post.all + Gallery.all).sort_by(&:created_at).reverse
+      sorted = (scoped_index(Post) + scoped_index(Gallery)).sort_by(&:created_at).reverse
       return  sorted.last(count) if count 
       sorted
     end

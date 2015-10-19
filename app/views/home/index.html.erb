@@ -5,7 +5,7 @@
 
         <div class="col-sm-6 col-sm-offset-3">
 
-          <div class="pfblock-header wow fadeInUp">
+          <div class="pfblock-header">
             <h2 class="pfblock-title">S tímto mohu pomoci</h2>
             <div class="pfblock-line"></div>
             <div class="pfblock-subtitle">
@@ -23,69 +23,51 @@
       <div class="row">
 
         <div class="col-sm-3">
-
-          <div class="iconbox infobox wow slideInLeft">
-            <div class="iconbox-icon text-center">
+          <div class="infobox">
+            <div class="infobox-icon">
               <%= image_tag "icon_webdev.png", alt: "webove aplikace" %>
             </div>
-            <div class="iconbox-text text-center">
-              <h3 class="iconbox-title">Webové Aplikace</h3>
-              <div class="iconbox-desc">
-                Literally synth Banksy art party. Post-ironic try-hard Kickstarter street art artisan, typewriter skateboard High Life quinoa freegan beard four loko health goth put a bird on it fap. Wolf street art kale chips, chia pork belly kogi taxidermy flexitarian. 
-              </div>
-            </div>
+            <h3 class="infobox-title">Webové Aplikace</h3>
+            <p>
+              Vytvářim aplikace na míru. Od jednoduchého blogu po komplexní řešení se sociálními prvky pro stovky až tisíce uživatelů. Vždy maximálně flexibilně, čistě a škálovatelně.
+            </p>
           </div>
-
         </div>
 
-
-
         <div class="col-sm-3">
-
-          <div class="iconbox infobox wow slideInRight">
-            <div class="iconbox-icon text-center">
+          <div class="infobox">
+            <div class="infobox-icon">
               <%= image_tag "icon_server.png", alt: "sprava serveru" %>
             </div>
-            <div class="iconbox-text">
-              <h3 class="iconbox-title text-center">Správa serverů</h3>
-              <div class="iconbox-desc">
-                Odd Future stumptown bitters pour-over ugh slow-carb four loko, post-ironic seitan roof party scenester tattooed artisan. Next level single-origin coffee slow-carb PBR, lo-fi tousled trust fund art party Kickstarter leggings. 
-              </div>
-            </div>
+            <h3 class="infobox-title">Správa serverů</h3>
+            <p>
+              Mám mnohaleté zkušenosti se správou desítek linuxových serverů. Web, mail, databáze, skripování, virtualizace... Zvládám konfigurovat a spravovat jakékoliv z linuxových zaklínadel.
+            </p>
           </div>
-
         </div>
 
         <div class="col-sm-3">
-
-          <div class="iconbox infobox wow slideInRight">
-            <div class="iconbox-icon text-center">
+          <div class="infobox">
+            <div class="infobox-icon">
               <%= image_tag "icon_programming.png", alt: "programovani" %>
             </div>
-            <div class="iconbox-text">
-              <h3 class="iconbox-title text-center">Programování</h3>
-              <div class="iconbox-desc">
-                 Tattooed Williamsburg distillery, kogi umami heirloom keffiyeh Godard. Flannel listicle Pitchfork cred, synth 3 wolf moon small batch food truck keffiyeh blog.
-              </div>
-            </div>
+            <h3 class="infobox-title">Programování</h3>
+            <p>
+              Potřebujete vytvořit spíše klasickou aplikaci, nebo specializovaný serverový program? Umím jak jednoduché skripty, tak větší objektové řešení. Vše včetně dokumentace a testů.
+            </p>
           </div>
-
         </div>
 
         <div class="col-sm-3">
-
-          <div class="iconbox infobox wow slideInLeft">
-            <div class="iconbox-icon text-center">
+          <div class="infobox">
+            <div class="infobox-icon">
               <%= image_tag "icon_graphics.png", alt: "grafika" %>
             </div>
-            <div class="iconbox-text">
-              <h3 class="iconbox-title text-center">Grafika</h3>
-              <div class="iconbox-desc">
-                Authentic DIY tofu, street art ugh retro tattooed swag. Typewriter post-ironic 8-bit hoodie, cray photo booth fanny pack fixie tilde. Trust fund master cleanse blog, Godard mixtape swag direct trade ugh migas tilde slow-carb Thundercats meggings.
-              </div>
-            </div>
+            <h3 class="infobox-title">Grafika</h3>
+            <p>
+              Mě baví. Rád navrhuji loga, ikony a všemožnou vektorovou grafiku tak, jako na tomto webu. Mám ale i zkušenosti s 3d tvorbou. Snažím se do své práce vtisknout originální myšlenku a jasně definovat danou značku.
+            </p>
           </div>
-
         </div>
 
       </div><!-- /.row -->
@@ -109,8 +91,8 @@
 
     <div class="row stream">
       <%= render partial: 'shared/stream', collection: @streams %>
-
     </div><!-- .row -->
+    
   </div><!-- .container -->
 </section>
 
@@ -118,7 +100,7 @@
   <%= image_tag("wolf-section.png", alt: "wolf-section", class: "center") %>
 </section>
 
-<section id="" class="pfblock-gray">
+<section id="" class="pfblock">
   <div class="container">
 
     <div class="row">
@@ -130,7 +112,7 @@
       </div>
     </div><!-- .row -->
 
-    <div class="row pfblock">
+    <div class="row">
       <div class="col-sm-8">
         <%= render partial: 'shared/userbox' %>
       </div>
@@ -139,7 +121,7 @@
       </div>
     </div><!-- .row -->
 
-    <div class="row">
+    <div class="row pfblock">
       <div class="col-sm-6">
       <%= render partial: 'shared/skillsbox' %>
       </div>
@@ -149,6 +131,80 @@
       </div>
 
     </div><!-- .row -->
+
+  </div><!-- .container -->
+</section>
+
+<section id="" class="">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="pfblock-header wow fadeInUp">
+          <h2 class="pfblock-title">O tomto webu</h2>
+          <div class="pfblock-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="iconbox infobox wow slideInLeft">
+        <div class="iconbox-icon text-center">
+          <%= image_tag "icon_info.png", alt: "webove aplikace" %>
+        </div>
+        <div class="iconbox-text text-center">
+          <div class="iconbox-desc text-left">
+            <p>
+            Ačkoliv tento web používám prozatím pouze já, tak je vše připraveno pro mnoho různých uživatelů. Škálování a přidávání funkcí není žádným problémem.
+            </p>
+            <p>
+            Všechny podstatné informace na webu jsou dynamicky načítané z uživatelského profilu. Změna se projeví všude včetně automaticky generovaného PDF CV. Uživatel si může upravovat svůj profil, měnit informace, kompetence, zkušenosti a přidávat doplňující informace.
+            </p>
+            <p>
+            V současnosti je možné přidávat blogové zápisky, komentovat je, přidat fotogalerii a cokoliv oštítkovat. 
+            Blogy je možné stylovat pomocí Markdown a je možné vkládat obrázky z galerie.
+            Vše je přístupné pomocí nástěnky, což je kombinovaný proud příspěvků zobrazený formou infoboxů.
+            </p>
+            <p>
+            Editační úkony na svých příspěvcích smí provádět pouze registrovaný uživatel. Administrátor může editovat příspěvky všech.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="iconbox infobox wow slideInLeft">
+        <div class="iconbox-icon text-center">
+          <%= image_tag "icon_mark.png", alt: "webove aplikace" %>
+        </div>
+        <div class="iconbox-text text-center">
+          <div class="iconbox-desc text-left">
+            <p>
+              Web je napsaný v <%= link_to "Ruby on Rails", "http://rubyonrails.org/", target: "_blank" %>, za pomoci CSS frameworku <%= link_to "Bootstrap", "http://getbootstrap.com/", target: "_blank" %>, v editoru <%= link_to "Sublime", "http://www.sublimetext.com/", target: "_blank" %>. Vzhledem k účelu jsou veškeré komponenty naddimenzované, což byl záměr. Jde o ukázku mých schopností. 
+            </p>
+            Používám pouze několik dodatečných gemů:
+            <ul class="list-unstyled">
+              <li><%= link_to "Font Awesome", "https://github.com/bokmann/font-awesome-rails", target: "_blank" %> - jednoduché ikony</li>
+
+              <li><%= link_to "Redcarpet", "https://github.com/vmg/redcarpet", target: "_blank" %> - Markdown renderování</li>
+
+              <li><%= link_to "Paperclip", "https://github.com/thoughtbot/paperclip", target: "_blank" %> - ukládáni souborů (a jejich asociace s danou databází).</li>
+
+              <li><%= link_to "Nested Forms", "https://github.com/ncri/nested_form_fields", target: "_blank" %> - zanořené položky asociovaných databází ve formuláři</li>
+
+              <li><%= link_to "Prawn", "https://github.com/prawnpdf/prawn", target: "_blank" %> - PDF renderování</li>
+            </ul>
+            <p>Grafika a fotky jsou moje práce. Ikony a logo jsem vytvořil v editoru <%= link_to "Inkscape", "https://inkscape.org", target: "_blank" %>.
+            </p>
+            <p>
+              Veškerý kód je licencován pod open-source licencí <%= link_to "GPLv3", "http://www.gnu.org/copyleft/gpl.html", target: "_blank" %> a je k dispozici na <%= link_to "GitHubu", "https://github.com/stepnivlk/stepnivlk", target: "_blank" %>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   </div><!-- .container -->
 </section>

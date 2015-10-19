@@ -10,7 +10,7 @@ module ApplicationHelper
 
     def parse_media_link(link)
       matches = link.match(/^([\w\d\.]+)(?:\|(\w+))?(?:\|([\w\s\d]+))?$/)
-      { :id => matches[1], :size => (matches[2] || 'original').to_sym, :class => matches[3] } if matches
+      { id: matches[1], size: (matches[2] || 'original').to_sym, class: matches[3] } if matches
     end
 
     def image(link, title, alt_text)
@@ -51,6 +51,9 @@ module ApplicationHelper
 
   def active_page(path)
   "active" if request.url.include?(path)
-end
+  end
 
+  def private_object(object)
+    "private" unless object.public
+  end
 end

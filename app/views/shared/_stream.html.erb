@@ -3,7 +3,7 @@
     <%= link_to post_path(stream) do %>
       <div class="postbox">
         <div class="box-title">
-          <h4><%= stream.created_at %></h4>
+          <h4><%= stream.title %></h4>
         </div>
         <p><%= strip_tags(markdown stream.content.truncate(200)) %></p>
       </div>
@@ -17,7 +17,7 @@
           <%= image_tag(image.file.url(:thumb)) %>
         <% end %>
         <div class="box-title">
-          <h4><%= stream.created_at %></h4>
+          <h4><%= stream.name %></h4>
         </div>
       </div>
     <% end %>

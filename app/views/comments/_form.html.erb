@@ -11,24 +11,24 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <div class="form-group">
-        <div class="input-group col-xs-4 col-xs-offset-1">
+        <div class="input-group col-xs-4">
           <%= f.label :author, "Jméno:" %><br/>
           <%= f.text_field :author, class: "form-control" %>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="input-group col-xs-10 col-xs-offset-1">
+        <div class="input-group col-xs-12">
           <%= f.label :body, "Komentář:" %><br/>
           <%= f.text_area :body, rows: "6", maxlength: "800", class: "form-control"  %>
         </div>
       </div>
 
       <div class="row">
-      <div class="col-sm-4 col-sm-offset-1">
+      <div class="col-sm-6">
       <%= recaptcha_tags %>
       </div>
-      <div class="col-sm-4 col-sm-offset-2">
+      <div class="col-sm-6">
       <%= f.submit 'Odeslat', class: "btn btn-default push-right" %>
       </div>
       </div>

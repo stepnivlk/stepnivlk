@@ -2,19 +2,22 @@
   <div class="container">
 
     <div class="row">
-      <div class="text-center">
-        <ol class="breadcrumb">
-          <li><strong><%= link_to "~", root_path %></strong></li>
-          <li class="active">Galerie</li>
-        </ol>
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+        <div class="text-center">
+          <ol class="breadcrumb">
+            <li><strong><%= link_to "~", root_path %></strong></li>
+            <li class="active">Galerie</li>
+          </ol>
+        </div>
       </div>
     </div>
     
-    <% @galleries.each do |gallery| %>
+    <% @contents.each do |gallery| %>
       <div class="gallery-wrap">
 
         <div class="row">
           <div class="pfblock-header wow fadeInUp">
+            <%= fa_icon("eye-slash 2x", class: "private") unless gallery.public %>
             <h3 class="pfblock-title"><%= link_to gallery.name.truncate(14), gallery_path(gallery) %></h3>
             <div class="pfblock-line"></div>
             <div class="pfblock-subtitle">

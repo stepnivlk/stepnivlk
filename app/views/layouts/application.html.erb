@@ -15,7 +15,7 @@
 
     <%= render 'layouts/header' %>
 
-    <div class="container">
+
       <div class="col-sm-8 col-sm-offset-2 text-center">
         <% flash.each do |key, value| %>
           <div class="alert alert-<%= key %> alert-dismissible fade in" role="alert">
@@ -25,9 +25,28 @@
         <% end %>
       </div>
 
+
+
       <%= yield %>
 
       <%= debug(params) if Rails.env.development? %>
-     </div>
+
+
+     <% if current_page?(root_path) %>
+         <footer class="footer">
+      <div class="container">
+        <div class="row">
+        <div class="col-sm-6">
+        <p class="">
+        <%= fa_icon "puzzle-piece" %> <strong><%= link_to User.find(1).name, user_path(User.find(1)) %></strong>
+        </p>
+        </div>
+        <div class="col-sm-6">
+        <p class="text-right">Obsah publikován pod licencí <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a></p>
+        </div>
+        </div>
+      </div>
+    </footer>
+    <% end %>
   </body>
 </html>

@@ -1,11 +1,3 @@
-.iconbox {
-  background: #fff;
-  border-bottom: 1px solid #d4d4d4;
-  text-align: left;
-  padding: 20px 20px;
-  margin: 0 0 20px;
-}
-
 .box {
   background: #fff;
   text-align: left;
@@ -28,6 +20,30 @@
   color: #000;
   background-color: #fff;
 }
+
+
+.infobox {
+  border: 0;
+  color: $gray-darker;
+  background: $gray-lighter;
+  min-height: 360px;
+  text-align: center;
+  padding: 20px 20px;
+  margin: 0 0 20px;
+}
+
+.infobox-icon {
+  margin: 0 0 15px;
+  font-size: 32px;
+  color: #222;
+}
+
+.infobox-title {
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
 
 .userbox{
   padding: 40px 20px 40px 40px;
@@ -120,23 +136,9 @@
 
 
 
-.infobox {
-  border: 0;
-  color: $gray-darker;
-  background: $gray-lighter;
-  min-height: 360px;
-}
 
-.iconbox-icon {
-  margin: 0 0 15px;
-  font-size: 32px;
-  color: #222;
-}
 
-.iconbox-title {
-  margin: 0 0 15px;
-  padding: 0;
-}
+
 
 .image_thumb {
   padding: 0px;

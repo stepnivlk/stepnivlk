@@ -12,7 +12,6 @@
       </div>
     </div>
 
-    <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <div class="box">
 
@@ -34,7 +33,7 @@
           </div>
 
         <div class="row ">
-          <div class="col-sm-12">
+          <div class="col-sm-12 text-center">
             <% if @image.next %>
               <%= link_to image_tag(@image.file.url(:original)), gallery_image_path(@image.gallery_id, @image.next) %>
             <% else %>
@@ -67,6 +66,6 @@
 
         </div>
       </div>
-    </div>
+
   </div>
 </section>

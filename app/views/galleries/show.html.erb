@@ -13,10 +13,11 @@
 
     <div class="row">
       <div class="pfblock-header wow fadeInUp">
-        <h2 class="pfblock-title"><%= @gallery.name %></h2>
+        <%= fa_icon("eye-slash 2x", class: "private") unless @gallery.public %>
+        <h3 class="pfblock-title %>"><%= @gallery.name %></h3>
         <div class="pfblock-line"></div>
         <div class="pfblock-subtitle">
-          <%= @gallery.description %>
+         <%= @gallery.description %>
         </div>
       </div>
     </div>

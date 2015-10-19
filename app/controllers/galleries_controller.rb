@@ -1,14 +1,10 @@
 class GalleriesController < ApplicationController
   skip_before_action :logged_in_user, only: [:index, :show]
   before_action :find_gallery, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: :destroy
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
-    if logged_in? 
-      @galleries = Gallery.all.order("created_at desc")
-    else
-      @galleries = Gallery.where(public: true).order("created_at desc")
-    end
+    scoped_index(Gallery)
   end
 
   def new
@@ -31,6 +27,24 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    unless @gallery.public
+      correct_user
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @gallery.update gallery_params
+      if params[:images]
+        params[:images].each { |image| @gallery.images.create(file: image)}
+      end
+      flash[:success] = "Váše galerie byla úspěšně aktualizována."
+      redirect_to @gallery
+    else
+      render 'edit'
+    end
   end
 
   def destroy
@@ -49,7 +63,7 @@ class GalleriesController < ApplicationController
     end
 
     def correct_user
-      unless @gallery.user == current_user || current_user.admin
+      unless @gallery.user == current_user || logged_in_admin?
         flash[:danger] = "Nemáte oprávnění k provedení této operace."
         redirect_to(galleries_path)
       end

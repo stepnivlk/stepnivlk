@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -29,24 +29,36 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# icon font
 gem "font-awesome-rails"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# syntax highlight in markdown
 gem 'pygments.rb'
+
+# markdown render
 gem 'redcarpet'
+
+# file attachment
 gem 'paperclip'
 gem 'paperclip-meta'
 
+# nested model forms
 gem 'nested_form_fields'
 
-
+# google recaptch
 gem "recaptcha", require: "recaptcha/rails"
 
+# pdf render
 gem 'prawn'
 
+# exif reader
 gem 'exifr'
+
+gem 'will_paginate'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

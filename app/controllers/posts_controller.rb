@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.order("created_at DESC").all
+    scoped_index(Post)
   end
 
   def new
@@ -22,6 +22,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    unless @post.public
+      correct_user
+    end
     @comment = @post.comments.build
     @comments = @post.comments
   end
@@ -31,7 +34,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update post_params
-      flash[:success] = "Váš příspěvek byl úspěšně uložen."
+      flash[:success] = "Váš příspěvek byl úspěšně aktualizován."
       redirect_to @post
     else
       render 'edit'
@@ -54,7 +57,7 @@ class PostsController < ApplicationController
     end
 
     def correct_user
-      unless @post.user == current_user || current_user.admin
+      unless @post.user == current_user || logged_in_admin?
         flash[:danger] = "Nemáte oprávnění k provedení této operace."
         redirect_to(posts_path(anchor: "firstinfo"))
       end
