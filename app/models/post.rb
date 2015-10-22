@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true, length: { in: 3..50 }
   validates :content, presence: true
 
-  # complete this
+  # Returns string before *** in content.
   def content_before_break
     content.partition(/\*{3}/)[0]
   end

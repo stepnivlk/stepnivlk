@@ -3,19 +3,7 @@ class ImagesController < ApplicationController
   before_action :find_image, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
-  #delete this
-  # def new
-  #   @image = Image.new
-  # end
-
-  # def create
-  #   @image = Image.new image_params
-  #   if @image.save
-  #     redirect_to gallery_image_path(@image.gallery_id, @image), notice: "Your image was successfully saved"
-  #   else
-  #     render 'new', notice: "Unable to save your image"
-  #   end
-  # end
+  respond_to :html, :js
 
   def show
   end
@@ -24,19 +12,26 @@ class ImagesController < ApplicationController
   end
 
   def update
-    if @image.update image_params
-      flash[:success] = "Obrázek byl úspěšně aktualizován."
-      redirect_to gallery_image_path(@image.gallery, @image)
-    else
-      render 'edit'
+    respond_to do |format|
+      if @image.update image_params
+        format.html { redirect_to(gallery_image_path(@image.gallery, @image)) }
+        format.js
+      else
+        flash.now[:warning] = "Váš obrázek nebyl uložen, zkuste to znovu."
+        render 'edit'
+      end
     end
   end
 
-  # fix if not destroyed
   def destroy
     @image.destroy
     flash[:danger] = "Obrázek byl smazán."
-    redirect_to gallery_path(@image.gallery)
+    next_item = Image.where("id > ?", params[:id].to_i).first
+    if next_item
+      redirect_back_or action: 'show', id: next_item.id
+    else
+      redirect_back_or gallery_image_path(@image.gallery, @image)
+    end
   end
 
   private

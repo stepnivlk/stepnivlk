@@ -59,6 +59,12 @@ gem 'exifr'
 
 gem 'will_paginate'
 
+gem 'remotipart'
+
+gem 'responders', '~> 2.0'
+
+gem "bootstrap-switch-rails"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

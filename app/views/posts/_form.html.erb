@@ -26,10 +26,11 @@
 
     <div class="form-group">
       <div class="input-group">
-        <%= f.label :public %>
-        <%= f.check_box :public, class: "form-control" %>
+        <%= f.check_box :public, class: "", data: { size: 'small', 'on-color': 'warning', 'on-text': 'Public', 'off-text': 'Private' } %>
       </div>
     </div>
+
+
 
 
       <%= f.submit 'Odeslat', class: "btn btn-default"  %>

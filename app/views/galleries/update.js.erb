@@ -1,0 +1,2 @@
+$('div#<%= dom_id(@gallery) %>').replaceWith('<%= j render partial: "gallery", locals: {gallery: @gallery} %>');
+$('#gallery-upload-edit').modal('hide');

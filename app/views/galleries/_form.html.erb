@@ -1,5 +1,5 @@
 <div class="form-area"> 
-  <%= form_for @gallery, html: { multipart: true } do |f| %>
+  <%= form_for @gallery, remote: true, html: { multipart: true } do |f| %>
 
     <%= render 'shared/error_messages', object: f.object %>
 
@@ -26,14 +26,19 @@
 
     <div class="form-group">
       <div class="input-group">
-        <%= f.label :public %>
-        <%= f.check_box :public, class: "form-control" %>
-      </div>
+        <%= f.check_box :public, class: "", data: { size: 'small', 'on-color': 'warning', 'on-text': 'Public', 'off-text': 'Private' } %>
+              </div>
     </div>
 
+    <div class="row">
 
+
+    <div class="col-xs-3">
       <%= f.submit nil, class: 'btn btn-default' %>
-
-
+      </div>
+      <div class="col-xs-2">
+      <%= fa_icon("spinner spin 2x", class: "modalspinner ") %>
+      </div>
+      </div>
   <% end %>
 </div>

@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @gallery = Gallery.new
   end
 
   def create
@@ -22,7 +23,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    # only correct user can see non-public post.
+    # Only correct user can see non-public post.
     unless @post.public
       correct_user
     end
@@ -33,6 +34,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @gallery = Gallery.new
   end
 
   def update

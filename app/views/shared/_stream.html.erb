@@ -3,6 +3,7 @@
     <%= link_to post_path(stream) do %>
       <div class="postbox">
         <div class="box-title">
+          <%= fa_icon("eye-slash", class: "private") unless stream.public %>
           <h4><%= stream.title %></h4>
         </div>
         <p><%= strip_tags(markdown stream.content.truncate(200)) %></p>
@@ -17,6 +18,7 @@
           <%= image_tag(image.file.url(:thumb)) %>
         <% end %>
         <div class="box-title">
+          <%= fa_icon("eye-slash", class: "private") unless stream.public %>
           <h4><%= stream.name %></h4>
         </div>
       </div>

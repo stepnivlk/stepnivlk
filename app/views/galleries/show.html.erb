@@ -23,8 +23,12 @@
     </div>
 
     <div class="row">
-      <% @gallery.images.each do |image| %>
+      <% @images.each do |image| %>
         <div class="col-sm-3 gallery_thumb">
+          <% if (logged_in? && (current_user == image.gallery.user)) || logged_in_admin? %>
+            <%= link_to fa_icon("wrench"), edit_gallery_image_path(image.gallery_id, image) %> |
+            <%= link_to fa_icon("remove"), gallery_image_path(image.gallery, image), method: :delete, data: { confirm: "Are you sure ?"} %> 
+          <% end %>
           <%= link_to image_tag(image.file.url(:thumb), class: "image_thumb"), gallery_image_path(@gallery, image) %>
         </div>
       <% end %>
@@ -45,6 +49,10 @@
         </div>
       </div>
       </div>
+
+          <div class="col-sm-4 col-sm-offset-4 text-center">
+      <%= will_paginate @images, previous_label: fa_icon("chevron-left"), next_label: fa_icon("chevron-right") %>
+    </div>
 
   </div>
 </section>

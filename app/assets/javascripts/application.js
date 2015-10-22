@@ -13,10 +13,28 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.sticky.js
+//= require jquery.remotipart
 //= require bootstrap-sprockets
+//= require bootstrap-switch
 //= require nested_form_fields
 //= require_tree .
 $(document).ready(function() {
+  $('input:checkbox').bootstrapSwitch();
+
+    // hide spinner
+  $(".modalspinner").hide();
+
+
+  // show spinner on AJAX start
+  $(document).ajaxStart(function(){
+    $(".modalspinner").show();
+  });
+
+  // hide spinner on AJAX stop
+  $(document).ajaxStop(function(){
+    $(".modalspinner").hide();
+  });
+
 
   $('a[href*=#]').bind("click", function(e){          
     var anchor = $(this);

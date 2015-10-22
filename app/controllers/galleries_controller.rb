@@ -3,8 +3,10 @@ class GalleriesController < ApplicationController
   before_action :find_gallery, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
+  respond_to :html, :js
+
   def index
-    scoped_index(Gallery)
+    @galleries = scoped_index(Gallery)
   end
 
   def new
@@ -12,40 +14,54 @@ class GalleriesController < ApplicationController
   end
 
   def create
-    @gallery = current_user.galleries.build(gallery_params)
-
-    if @gallery.save
-      if params[:images]
-        params[:images].each { |image| @gallery.images.create(file: image)}
+    respond_to do |format|
+      @gallery = current_user.galleries.build(gallery_params)
+      if @gallery.save
+        if params[:images]
+          params[:images].each { |image| @gallery.images.create(file: image)}
+        end
+        format.html { redirect_to @gallery }
+        format.js
+      else
+        format.html do
+          flash.now[:warning] = "Vaše galerie nebyla uložena, zkuste to znovu."
+          render 'new'
+        end
+        format.js
       end
-      flash[:success] = "Vaše galerie byla úspěšně uložena."
-      redirect_to @gallery
-    else
-      flash.now[:warning] = "Vaše galerie nebyla uložena, zkuste to znovu."
-      render 'new'
     end
   end
 
   def show
+    @images = @gallery.images.paginate(page: params[:page], per_page: 25)
+    store_location
     unless @gallery.public
       correct_user
     end
   end
 
   def edit
+
   end
 
   def update
-    if @gallery.update gallery_params
-      if params[:images]
-        params[:images].each { |image| @gallery.images.create(file: image)}
+    respond_to do |format|
+      if @gallery.update gallery_params
+        if params[:images]
+          params[:images].each { |image| @gallery.images.create(file: image)}
+        end
+        format.html { redirect_to @gallery }
+        format.js
+      else
+        format.html do
+          flash.now[:warning] = "Vaše galerie nebyla uložena, zkuste to znovu."
+          render 'edit'
+        end
+        format.js
       end
-      flash[:success] = "Váše galerie byla úspěšně aktualizována."
-      redirect_to @gallery
-    else
-      render 'edit'
     end
   end
+
 
   def destroy
     @gallery.destroy

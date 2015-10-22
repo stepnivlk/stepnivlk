@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class HomeController < ApplicationController
   skip_before_action :logged_in_user
 
@@ -16,17 +18,16 @@ class HomeController < ApplicationController
 
   # stream, full mix of all content.
   def stream
-    @streams = content_sorted(false)
+    @streams = content_sorted.paginate(page: params[:page], per_page: 25)
   end
 
   private
 
     # Returns sorted mix of n Posts and Galleries.
     #
-    # paginate - Redirect to scoped_index method.
-    # count    - No. of returned objects, nill=all.
-    def content_sorted(paginate = true, count=nil)
-      sorted = (scoped_index(Post, paginate) + scoped_index(Gallery, paginate)).sort_by(&:created_at).reverse
+    # count - No. of returned objects, nill=all.
+    def content_sorted(count=nil)
+      sorted = (scoped_index(Post, false) + scoped_index(Gallery, false)).sort_by(&:created_at).reverse
       return  sorted.last(count) if count
       sorted
     end

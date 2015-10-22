@@ -47,6 +47,7 @@ GEM
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
+    bootstrap-switch-rails (3.3.3)
     builder (3.2.2)
     byebug (6.0.2)
     climate_control (0.0.3)
@@ -189,6 +190,9 @@ GEM
     rdoc (4.2.0)
     recaptcha (0.4.0)
     redcarpet (3.3.2)
+    remotipart (1.2.1)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     ruby-progressbar (1.7.5)
     sass (3.4.18)
     sass-rails (5.0.4)
@@ -238,6 +242,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap-sass
+  bootstrap-switch-rails
   byebug
   coffee-rails (~> 4.1.0)
   exifr
@@ -259,6 +264,8 @@ DEPENDENCIES
   rails (= 4.2.4)
   recaptcha
   redcarpet
+  remotipart
+  responders (~> 2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

@@ -1,5 +1,5 @@
 class Message
-
+  
   include ActiveModel::Model
   include ActiveModel::Conversion
   include ActiveModel::Validations
@@ -12,6 +12,6 @@ class Message
   validates :email, presence: true, length: { maximum: 255 }, 
         format: { with: VALID_EMAIL_REGEX }
 
-  validates :content, presence: true, length: { maximum: 240 }
+  validates :content, presence: true, length: { maximum: 1000 }
 
 end

@@ -1,0 +1,7 @@
+$('form').hide();
+<% if @gallery.new_record? %>
+alert('The photo could not be uploaded');
+<% else %>
+$('#galleries-list').prepend('<%= j render @gallery %>');
+$('#gallery-upload').modal('hide')
+<% end %>

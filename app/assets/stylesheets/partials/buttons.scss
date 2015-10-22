@@ -33,7 +33,7 @@
   }
 }
 
-.btn-primary {
+.btn-test {
   border-radius: 0;
   border: 0;
   padding: 8px 12px 8px 12px;
@@ -43,6 +43,12 @@
   &:hover {
     background-color: $coral;
     color: #fff;
+    @include shadow();
+  }
+  &:visited {
+    background-color: $coral;
+    color: #fff; 
+    @include shadow();
   }
 }
 

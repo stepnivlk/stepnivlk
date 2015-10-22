@@ -1,0 +1,60 @@
+        <%= div_for gallery do %>
+<div class="gallery-wrap">
+
+        <div class="row">
+          <div class="pfblock-header wow fadeInUp">
+            <%= fa_icon("eye-slash 2x", class: "private") unless gallery.public %>
+            <h3 class="pfblock-title"><%= link_to gallery.name.truncate(30), gallery_path(gallery) %></h3>
+            <div class="pfblock-line"></div>
+            <div class="pfblock-subtitle">
+              <%= gallery.description %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <% if gallery.images.any? %>
+
+            <% gallery.images.first(10).each do |image| %>
+              <div class="col-sm-3 gallery_thumb">
+                <%= link_to image_tag(image.file.url(:thumb), class: "image_thumb"), gallery_image_path(gallery, image) %>
+              </div>
+            <% end %>
+
+            <% if gallery.images.size > 10 %>
+              <%= link_to gallery_path(gallery) do %>
+                <div class="col-sm-3 image_thumb_last">
+                  <div id="gallery_last_img_link">
+                    <strong>+ <%= (gallery.images.size) -10 %></strong>
+                    <%= fa_icon "image" %>
+                  </div>
+                  </div>
+
+                <% end %>
+              <% end %>
+
+            <% end %>
+
+        </div>
+
+        <div class="row">
+        <div class="col-sm-6 text-left">
+          <% if (logged_in? && (current_user == gallery.user)) || logged_in_admin? %>
+            <%= link_to fa_icon("wrench"), edit_gallery_path(gallery), data: {toggle: 'modal', remote: true, target: '#gallery-upload-edit' } %> |
+
+            <%= link_to fa_icon("remove"), gallery, data: { confirm: "Are you sure?" }, method: :delete %>
+            
+          <% end %>
+        </div>
+        <div class="col-sm-6 text-right">
+          <%= link_to gallery.user do %>
+            <%= image_tag(gallery.user.avatar.url(:thumb), alt: "post_user", class: "user-icon-img") + " " + gallery.user.name %>
+          <% end %>
+          |
+          <%= fa_icon("calendar") + " " + gallery.created_at.strftime("%d/%m/%Y") %>
+        </div>
+      </div>
+
+      </div>
+          <% end %>

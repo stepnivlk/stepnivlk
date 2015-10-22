@@ -1,5 +1,6 @@
 module SessionsHelper
 
+  # Writes encrypted id of given user to session.
   def log_in(user)
     session[:user_id] = user.id
   end
@@ -32,12 +33,15 @@ module SessionsHelper
     logged_in? && current_user.admin
   end
 
+  # Deletes remember_digest from user model.
+  # Deletes given user and his remember token from cookies.
   def forget(user)
     user.forget
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
 
+  # logs out current user
   def log_out
     forget(current_user)
     session.delete(:user_id)
@@ -49,7 +53,7 @@ module SessionsHelper
   # model    - Right model, has to have user_id and public fields.
   # paginate - If set, use pagination. Default = true.
   # per_page - No. of objects per page. Default = 10.
-  def scoped_index(model, paginate = true, per_page = 10)
+  def scoped_index(model, paginate = true, per_page = 25)
     if logged_in? 
       @contents = model.where(:user_id == current_user.id).order("created_at DESC")
     elsif logged_in_admin?
@@ -59,5 +63,15 @@ module SessionsHelper
     end
     return @contents unless paginate
     @contents = @contents.paginate(page: params[:page], per_page: per_page)
+  end
+
+  def redirect_back_or(default)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  # Stores the URL trying to be accessed.
+  def store_location
+    session[:forwarding_url] = request.url if request.get?
   end
 end

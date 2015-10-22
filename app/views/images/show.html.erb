@@ -2,13 +2,15 @@
   <div class="container">
 
     <div class="row">
-      <div class="text-center">
-        <ol class="breadcrumb">
-          <li><strong><%= link_to "~", root_path %></strong></li>
-          <li><%= link_to "Galerie", galleries_path %></li>
-          <li><%= link_to @image.gallery.name, gallery_path(@image.gallery) %></li>
-          <li class="active"><%= @image.id %></li>
-        </ol>
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+        <div class="text-center">
+          <ol class="breadcrumb">
+            <li><strong><%= link_to "~", root_path %></strong></li>
+            <li><%= link_to "Galerie", galleries_path %></li>
+            <li><%= link_to @image.gallery.name, gallery_path(@image.gallery) %></li>
+            <li class="active"><%= @image.id %></li>
+          </ol>
+        </div>
       </div>
     </div>
 
