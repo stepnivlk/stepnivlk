@@ -17,20 +17,28 @@ class ImagesController < ApplicationController
         format.html { redirect_to(gallery_image_path(@image.gallery, @image)) }
         format.js
       else
-        flash.now[:warning] = "Váš obrázek nebyl uložen, zkuste to znovu."
+        flash.now[:danger] = "Váš obrázek nebyl uložen, zkuste to znovu."
         render 'edit'
       end
     end
   end
 
   def destroy
-    @image.destroy
-    flash[:danger] = "Obrázek byl smazán."
-    next_item = Image.where("id > ?", params[:id].to_i).first
-    if next_item
-      redirect_back_or action: 'show', id: next_item.id
+    if @image.destroy
+      respond_to do |format|
+        format.js
+        format.html do 
+          flash[:danger] = "Váš obrázek byl smazán."
+          if next_item = Image.where("id > ?", @image.id).first
+            redirect_back_or(action: 'show', id: next_item.id)
+          else
+            redirect_back_or(gallery_path(@image.gallery, @image)) 
+          end
+        end
+      end
     else
-      redirect_back_or gallery_image_path(@image.gallery, @image)
+      flash[:danger] = "Chyba! Váš obrázek nebyl smazán."
+      redirect_back_or(gallery_path(@image.gallery, @image)) 
     end
   end
 

@@ -41,7 +41,7 @@ class GalleriesController < ApplicationController
   end
 
   def edit
-
+    @location = session[:forwarding_url]
   end
 
   def update
@@ -59,9 +59,9 @@ class GalleriesController < ApplicationController
         end
         format.js
       end
+      delete_location
     end
   end
-
 
   def destroy
     @gallery.destroy

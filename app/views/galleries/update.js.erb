@@ -1,2 +1,8 @@
-$('div#<%= dom_id(@gallery) %>').replaceWith('<%= j render partial: "gallery", locals: {gallery: @gallery} %>');
-$('#gallery-upload-edit').modal('hide');
+<% if url_for(:back).last(3) =~ /\d/  %>
+  $('#gallery-title').html('<%= @gallery.name %>')
+  $('div#<%= dom_id(@gallery) %>').replaceWith('<%= j render partial: "images/image", collection: @gallery.images %>');
+  $('#edit').modal('hide');
+<% else %>
+  $('div#<%= dom_id(@gallery) %>').replaceWith('<%= j render partial: "gallery", locals: {gallery: @gallery} %>');
+  $('#edit').modal('hide');
+<% end %>

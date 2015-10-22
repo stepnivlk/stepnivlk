@@ -1,2 +1,9 @@
-<%= @image.file.file_name %>
-<%= image_tag(@image.file.url) %>
+<%= div_for image do %>
+  <div class="col-sm-3 gallery_thumb">
+    <% if (logged_in? && (current_user == image.gallery.user)) || logged_in_admin? %>
+      <%= link_to fa_icon("wrench"), edit_gallery_image_path(image.gallery_id, image), data: {toggle: 'modal', remote: true, target: '#edit' } %> |
+      <%= link_to fa_icon("remove"), gallery_image_path(image.gallery, image), method: :delete, data: { remote: true, confirm: "Are you sure ?"} %> 
+    <% end %>
+    <%= link_to image_tag(image.file.url(:thumb), class: "image_thumb"), gallery_image_path(@gallery, image) %>
+  </div>
+<% end %>

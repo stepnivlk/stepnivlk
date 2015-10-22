@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
 
-    # Recaptcha for test for real user.
+    # Recaptcha test for real user.
     if verify_recaptcha
       if @comment.save
         flash[:success] = "Komentář přidán."

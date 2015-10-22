@@ -65,6 +65,7 @@ module SessionsHelper
     @contents = @contents.paginate(page: params[:page], per_page: per_page)
   end
 
+  # Redirects to URL from session or to given URL.
   def redirect_back_or(default)
     redirect_to(session[:forwarding_url] || default)
     session.delete(:forwarding_url)
@@ -73,5 +74,9 @@ module SessionsHelper
   # Stores the URL trying to be accessed.
   def store_location
     session[:forwarding_url] = request.url if request.get?
+  end
+
+  def delete_location
+    session.delete(:forwarding_url) if session.delete(:forwarding_url)
   end
 end

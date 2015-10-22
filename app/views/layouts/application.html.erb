@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stepnivlk</title>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= favicon_link_tag 'favicon.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,7 @@
         <% end %>
       </div>
 
-
+      <%= render 'shared/edit_modal' %>
 
       <%= yield %>
 

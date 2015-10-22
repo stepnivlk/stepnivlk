@@ -26,19 +26,19 @@
 
     <div class="form-group">
       <div class="input-group">
-        <%= f.check_box :public, class: "", data: { size: 'small', 'on-color': 'warning', 'on-text': 'Public', 'off-text': 'Private' } %>
-              </div>
+      <%= f.label :public %><br>
+        <%= f.check_box :public, class: "" %>
+      </div>
     </div>
 
     <div class="row">
-
-
-    <div class="col-xs-3">
-      <%= f.submit nil, class: 'btn btn-default' %>
+      <div class="col-xs-3">
+        <%= f.submit nil, class: 'btn btn-default' %>
       </div>
       <div class="col-xs-2">
-      <%= fa_icon("spinner spin 2x", class: "modalspinner ") %>
+        <%= fa_icon("spinner spin 2x", class: "modalspinner ") %>
       </div>
-      </div>
+    </div>
+
   <% end %>
 </div>

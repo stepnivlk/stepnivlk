@@ -1,3 +1,5 @@
+<% provide(:title, 'Galerie') %>
+
 <section class="pfblock-gray">
   <div class="container">
 
@@ -6,7 +8,7 @@
         <div class="text-center">
           <ol class="breadcrumb">
             <li>
-              <%= link_to root_path do %>
+              <%= link_to root_path( anchor: "firstinfo" )  do %>
                 <%= fa_icon "home" %>
               <% end %>
             </li>
@@ -21,13 +23,10 @@
       </div>
     </div>
   
+    <%= render 'new_modal' %>
 
-
-      <%= render 'new_modal' %>
-      <%= render partial: 'edit_modal' %>
-
-      <div class="pfblock" id="galleries-list">
-    <%= render @galleries %>
+    <div class="pfblock" id="galleries-list">
+      <%= render @galleries %>
     </div>
 
     <div class="col-sm-4 col-sm-offset-4 text-center">

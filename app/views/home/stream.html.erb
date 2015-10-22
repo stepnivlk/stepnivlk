@@ -1,10 +1,16 @@
- <section id="" class="">
+<% provide(:title, 'Nástěnka') %>
+
+<section id="" class="">
   <div class="container">
 
     <div class="row">
       <div class="col-sm-4 col-sm-offset-4 text-center">
         <ol class="breadcrumb">
-          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li>
+            <%= link_to root_path( anchor: "firstinfo" )  do %>
+              <%= fa_icon "home" %>
+            <% end %>
+          </li>
           <li class="active"><%= "Nástěnka" %></li>
         </ol>
       </div>
@@ -14,7 +20,7 @@
       <%= render partial: 'shared/stream', collection: @streams %>
     </div><!-- .row -->
 
-        <div class="col-sm-4 col-sm-offset-4 text-center">
+    <div class="col-sm-4 col-sm-offset-4 text-center">
       <%= will_paginate @streams, previous_label: fa_icon("chevron-left"), next_label: fa_icon("chevron-right") %>
     </div>
   </div><!-- .container -->

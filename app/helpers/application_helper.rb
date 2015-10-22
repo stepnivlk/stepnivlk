@@ -106,4 +106,14 @@ module ApplicationHelper
   def active_page(path)
     "active" if request.url.include?(path)
   end
+
+  # Returns full title with given prefix.
+  def full_title(page_title = '')
+    base_title = "Stepní Vlk"
+    if page_title.empty?
+      base_title
+    else
+      page_title + " | " + base_title
+    end
+  end
 end

@@ -1,11 +1,32 @@
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
-@import "bootstrap";
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+// Components
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/alerts";
+@import "bootstrap/close";
+// Components w/ JavaScript
+@import "bootstrap/modals";
+
 @import "font-awesome";
 @import "pygments";
-@import "bootstrap3-switch";
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800);
-@import url(http://fonts.googleapis.com/css?family=Lobster);
 @import url(http://fonts.googleapis.com/css?family=Exo+2&subset=latin,latin-ext);
 @import "colors";
 @import "mixins";

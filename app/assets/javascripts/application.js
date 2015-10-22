@@ -15,12 +15,9 @@
 //= require jquery.sticky.js
 //= require jquery.remotipart
 //= require bootstrap-sprockets
-//= require bootstrap-switch
 //= require nested_form_fields
 //= require_tree .
 $(document).ready(function() {
-  $('input:checkbox').bootstrapSwitch();
-
     // hide spinner
   $(".modalspinner").hide();
 

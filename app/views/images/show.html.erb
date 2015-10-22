@@ -1,3 +1,5 @@
+<% provide(:title, 'Galerie') %>
+
 <section id="services" class="pfblock-gray">
   <div class="container">
 
@@ -5,7 +7,11 @@
       <div class="col-sm-4 col-sm-offset-4 text-center">
         <div class="text-center">
           <ol class="breadcrumb">
-            <li><strong><%= link_to "~", root_path %></strong></li>
+            <li>
+              <%= link_to root_path( anchor: "firstinfo" )  do %>
+                <%= fa_icon "home" %>
+              <% end %>
+            </li>
             <li><%= link_to "Galerie", galleries_path %></li>
             <li><%= link_to @image.gallery.name, gallery_path(@image.gallery) %></li>
             <li class="active"><%= @image.id %></li>
@@ -19,18 +25,21 @@
 
           <div class="row text-center">
             <div class="col-sm-2 text-left">
-              <strong><%= link_to fa_icon("chevron-left 2x"), gallery_image_path(@image.gallery_id, @image.prev) if @image.prev %></strong>
+              <strong><%= link_to(fa_icon("chevron-left 2x"), gallery_image_path(@image.gallery_id, @image.prev)) if @image.prev %></strong>
             </div>
             <div class="col-sm-8 iconbox-title">
               <h4 class=""><%= @image.file_file_name %> </h4> 
               <% if (logged_in? && (current_user == @image.gallery.user)) || logged_in_admin? %>
-                <%= link_to fa_icon("wrench"), edit_gallery_image_path(@image.gallery_id, @image) %> |
+
+                <%= link_to fa_icon("wrench"), edit_gallery_image_path(@image.gallery_id, @image), data: {toggle: 'modal', remote: true, target: '#edit' } %> |
+
                 <%= link_to fa_icon("remove"), gallery_image_path(@image.gallery, @image), method: :delete, data: { confirm: "Are you sure ?"} %> 
+
               <% end %>
 
             </div>
             <div class="col-sm-2 text-right">
-              <strong><%= link_to fa_icon("chevron-right 2x"), gallery_image_path(@image.gallery_id, @image.next) if @image.next %></strong>
+              <strong><%= link_to(fa_icon("chevron-right 2x"), gallery_image_path(@image.gallery_id, @image.next)) if @image.next %></strong>
             </div>
           </div>
 

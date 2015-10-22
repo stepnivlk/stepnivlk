@@ -1,10 +1,16 @@
+<% provide(:title, 'Galerie') %>
+
 <section id="services" class="pfblock-gray">
   <div class="container">
 
     <div class="row">
       <div class="col-sm-4 col-sm-offset-4 text-center">
         <ol class="breadcrumb">
-          <li><strong><%= link_to "~", root_path %></strong></li>
+          <li>
+            <%= link_to root_path( anchor: "firstinfo" )  do %>
+              <%= fa_icon "home" %>
+            <% end %>
+          </li>
           <li><%= link_to "Galerie", galleries_path %></li>
           <li class="active"><%= @gallery.id %></li>
         </ol>
@@ -14,7 +20,7 @@
     <div class="row">
       <div class="pfblock-header wow fadeInUp">
         <%= fa_icon("eye-slash 2x", class: "private") unless @gallery.public %>
-        <h3 class="pfblock-title %>"><%= @gallery.name %></h3>
+        <h3 class="pfblock-title" id="gallery-title"><%= @gallery.name %></h3>
         <div class="pfblock-line"></div>
         <div class="pfblock-subtitle">
          <%= @gallery.description %>
@@ -23,20 +29,14 @@
     </div>
 
     <div class="row">
-      <% @images.each do |image| %>
-        <div class="col-sm-3 gallery_thumb">
-          <% if (logged_in? && (current_user == image.gallery.user)) || logged_in_admin? %>
-            <%= link_to fa_icon("wrench"), edit_gallery_image_path(image.gallery_id, image) %> |
-            <%= link_to fa_icon("remove"), gallery_image_path(image.gallery, image), method: :delete, data: { confirm: "Are you sure ?"} %> 
-          <% end %>
-          <%= link_to image_tag(image.file.url(:thumb), class: "image_thumb"), gallery_image_path(@gallery, image) %>
-        </div>
+      <%= div_for @gallery do %>
+      <%= render partial: 'images/image', collection: @images %>
       <% end %>
     </div>
     <div class="row">
       <div class="col-sm-6 text-left">
         <% if (logged_in? && (current_user == @gallery.user)) || logged_in_admin? %>
-          <%= link_to fa_icon("wrench"), edit_gallery_path(@gallery) %> |
+          <%= link_to fa_icon("wrench"), edit_gallery_path(@gallery), data: { toggle: "modal", remote: true, target: '#edit' } %> |
           <%= link_to fa_icon("remove"), @gallery, data: { confirm: "Are you sure?" }, method: :delete %>
         <% end %>
       </div>
