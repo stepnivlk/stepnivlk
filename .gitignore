@@ -17,5 +17,4 @@
 /tmp
 
 
-#ignore recaptcha
-/initializers/recaptcha.rb
+config/database.yml
