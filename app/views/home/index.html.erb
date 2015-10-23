@@ -148,8 +148,46 @@
     </div>
 
     <div class="col-sm-6">
-      <div class="iconbox infobox wow slideInLeft">
-        <div class="iconbox-icon text-center">
+      <div class="infobox">
+        <div class="infobox-icon">
+          <%= image_tag "icon_mark.png", alt: "webove aplikace" %>
+        </div>
+        <div class="text-center">
+          <div class="text-left">
+            <p>
+              Web je napsaný v <%= link_to "Ruby on Rails", "http://rubyonrails.org/", target: "_blank" %>, za pomoci CSS frameworku <%= link_to "Bootstrap", "http://getbootstrap.com/", target: "_blank" %>, v editoru <%= link_to "Sublime", "http://www.sublimetext.com/", target: "_blank" %>.
+            </p>
+            Používám pouze několik dodatečných gemů:
+            <ul class="list-unstyled">
+              <li><%= link_to "Font Awesome", "https://github.com/bokmann/font-awesome-rails", target: "_blank" %> - jednoduché ikony</li>
+
+              <li><%= link_to "Redcarpet", "https://github.com/vmg/redcarpet", target: "_blank" %> - Markdown renderování</li>
+
+              <li><%= link_to "Paperclip", "https://github.com/thoughtbot/paperclip", target: "_blank" %> - ukládáni souborů (a jejich asociace s danou databází).</li>
+
+              <li><%= link_to "Nested Forms", "https://github.com/ncri/nested_form_fields", target: "_blank" %> - zanořené položky asociovaných databází ve formuláři</li>
+
+              <li><%= link_to "Prawn", "https://github.com/prawnpdf/prawn", target: "_blank" %> - PDF renderování</li>
+
+              <li><%= link_to "Recaptch", "https://github.com/ambethia/recaptcha/", target: "_blank" %> - CAPTCHA ověřovaní</li>
+
+              <li><%= link_to "EXIFR", "https://github.com/remvee/exifr", target: "_blank" %> - Načítání EXIF informací z fotek</li>
+
+              <li><%= link_to "Will Paginate", "https://github.com/mislav/will_paginate", target: "_blank" %> - Stránkování</li>
+            </ul>
+            <p>Grafika a fotky jsou moje práce. Ikony a logo jsem vytvořil v editoru <%= link_to "Inkscape", "https://inkscape.org", target: "_blank" %>.
+            </p>
+            <p>
+              Veškerý kód je licencován pod open-source licencí <%= link_to "GPLv3", "http://www.gnu.org/copyleft/gpl.html", target: "_blank" %> a je k dispozici na <%= link_to "GitHubu", "https://github.com/stepnivlk/stepnivlk", target: "_blank" %>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="infobox">
+        <div class="infobox-icon">
           <%= image_tag "icon_info.png", alt: "webove aplikace" %>
         </div>
         <div class="iconbox-text text-center">
@@ -166,44 +204,13 @@
             Vše je přístupné pomocí nástěnky, což je kombinovaný proud příspěvků zobrazený formou infoboxů.
             </p>
             <p>
-            Editační úkony na svých příspěvcích smí provádět pouze registrovaný uživatel. Administrátor může editovat příspěvky všech.
+            Tam kde je to vhodné používám AJAX pro dynamické načítání nových informací.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-6">
-      <div class="iconbox infobox wow slideInLeft">
-        <div class="iconbox-icon text-center">
-          <%= image_tag "icon_mark.png", alt: "webove aplikace" %>
-        </div>
-        <div class="iconbox-text text-center">
-          <div class="iconbox-desc text-left">
-            <p>
-              Web je napsaný v <%= link_to "Ruby on Rails", "http://rubyonrails.org/", target: "_blank" %>, za pomoci CSS frameworku <%= link_to "Bootstrap", "http://getbootstrap.com/", target: "_blank" %>, v editoru <%= link_to "Sublime", "http://www.sublimetext.com/", target: "_blank" %>. Vzhledem k účelu jsou veškeré komponenty naddimenzované, což byl záměr. Jde o ukázku mých schopností. 
-            </p>
-            Používám pouze několik dodatečných gemů:
-            <ul class="list-unstyled">
-              <li><%= link_to "Font Awesome", "https://github.com/bokmann/font-awesome-rails", target: "_blank" %> - jednoduché ikony</li>
-
-              <li><%= link_to "Redcarpet", "https://github.com/vmg/redcarpet", target: "_blank" %> - Markdown renderování</li>
-
-              <li><%= link_to "Paperclip", "https://github.com/thoughtbot/paperclip", target: "_blank" %> - ukládáni souborů (a jejich asociace s danou databází).</li>
-
-              <li><%= link_to "Nested Forms", "https://github.com/ncri/nested_form_fields", target: "_blank" %> - zanořené položky asociovaných databází ve formuláři</li>
-
-              <li><%= link_to "Prawn", "https://github.com/prawnpdf/prawn", target: "_blank" %> - PDF renderování</li>
-            </ul>
-            <p>Grafika a fotky jsou moje práce. Ikony a logo jsem vytvořil v editoru <%= link_to "Inkscape", "https://inkscape.org", target: "_blank" %>.
-            </p>
-            <p>
-              Veškerý kód je licencován pod open-source licencí <%= link_to "GPLv3", "http://www.gnu.org/copyleft/gpl.html", target: "_blank" %> a je k dispozici na <%= link_to "GitHubu", "https://github.com/stepnivlk/stepnivlk", target: "_blank" %>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
   </div><!-- .container -->

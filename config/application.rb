@@ -22,5 +22,17 @@ module Stepnivlk
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    #mail server
+    config.action_mailer.smtp_settings = {
+        address: "mail.ernet",
+        port: 25,
+        openssl_verify_mode: "none"
+    }
+
+    # domena pro generovane url
+    config.action_mailer.default_url_options = {
+        host: "ernetfree.net"
+    }
   end
 end
