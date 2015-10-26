@@ -65,6 +65,7 @@ class CvPdf < Prawn::Document
 
     bounding_box([140, y_position - 100], width: 160, height: 100) do
       #stroke_bounds
+      text "Bydliště:", size: 12, color: "999999"
       text "E-mail:", size: 12, color: "999999"
       text "Telefon:", size: 12, color: "999999"
       text "Web:", size: 12, color: "999999"
@@ -72,6 +73,7 @@ class CvPdf < Prawn::Document
 
     bounding_box([260, y_position - 100], width: 330, height: 100) do
       #stroke_bounds
+      text "Přerov nad Labem, 289 16", size: 12
       text @user.email, size: 12
       text @user.phone, size: 12
       text "http://stepnivlk.net", size: 12
