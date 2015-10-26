@@ -36,6 +36,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # syntax highlight in markdown
 gem 'pygments.rb'
+gem 'coderay'
 
 # markdown render
 gem 'redcarpet'

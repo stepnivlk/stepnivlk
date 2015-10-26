@@ -11,7 +11,8 @@ module ApplicationHelper
     # code     - Code which will be highlighted.
     # language - Specify language of given code.
     def block_code(code, language)
-      Pygments.highlight(code, lexer: language)
+      language ||= :plaintext
+      CodeRay.scan(code, language).div
     end
 
     # Returns hash of information parsed from link.
@@ -86,7 +87,8 @@ module ApplicationHelper
       fenced_code_blocks: true,
       lax_html_blocks: true,
       strikethrough: true,
-      escape_html: true
+      escape_html: true,
+      superscript: true
     }
     Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end

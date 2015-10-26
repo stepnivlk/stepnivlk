@@ -14,8 +14,10 @@
             </li>
             <li class="active">Galerie</li>
             <li>
-              <%= link_to new_gallery_path, class: "", data: { toggle: "modal", remote: true, target: '#gallery-upload' } do %>
-                <%= fa_icon "plus" %>
+              <% if logged_in? %>
+                <%= link_to new_gallery_path, class: "", data: { toggle: "modal", remote: true, target: '#gallery-upload' } do %>
+                  <%= fa_icon "plus" %>
+                <% end %>
               <% end %>
             </li>
           </ol>

@@ -6,7 +6,7 @@ class GalleriesController < ApplicationController
   respond_to :html, :js
 
   def index
-    @galleries = scoped_index(Gallery)
+    @galleries = scoped_index(Gallery, true, 10)
   end
 
   def new

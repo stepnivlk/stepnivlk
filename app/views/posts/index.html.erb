@@ -12,11 +12,18 @@
             <% end %>
           </li>
           <li class="active">Blog</li>
+          <li>
+            <% if logged_in? %>
+              <%= link_to new_post_path, class: "" do %>
+                <%= fa_icon "plus" %>
+              <% end %>
+            <% end %>
+          </li>
         </ol>
       </div>
     </div>
 
-    <% @contents.each do |post| %>
+    <% @posts.each do |post| %>
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="box">
@@ -49,7 +56,7 @@
     <% end %>
 
     <div class="col-sm-4 col-sm-offset-4 text-center">
-      <%= will_paginate @contents, previous_label: fa_icon("chevron-left"), next_label: fa_icon("chevron-right") %>
+      <%= will_paginate @posts, previous_label: fa_icon("chevron-left"), next_label: fa_icon("chevron-right") %>
     </div>
 
   </div>
