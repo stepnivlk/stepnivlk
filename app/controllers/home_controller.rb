@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def index
     # content stream for recent activity.
-    @streams = Post.where(public: true).last(4) + Gallery.where(public: true).last(4)
+    @streams = (Post.where(public: true).last(4) + Gallery.where(public: true).last(4)).sort_by(&:created_at).reverse
     # user used for infoboxes
     @user = User.find_by(email: "tomas@stepnivlk.net")
     @simple_user_infos = @user.simple_user_infos
@@ -28,7 +28,7 @@ class HomeController < ApplicationController
     # count - No. of returned objects, nill=all.
     def content_sorted(count=nil, paginate=true)
       content = (scoped_index(Post, paginate) + scoped_index(Gallery, paginate))
-      sorted = content.sort_by(&:created_at).reverse!
+      sorted = content.sort_by(&:created_at).reverse
       return  sorted.last(count) if count
       sorted
     end
