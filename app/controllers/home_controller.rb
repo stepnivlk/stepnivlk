@@ -27,7 +27,8 @@ class HomeController < ApplicationController
     #
     # count - No. of returned objects, nill=all.
     def content_sorted(count=nil, paginate=true)
-      sorted = (scoped_index(Post, paginate)).sort_by(&:created_at).reverse
+      content = (scoped_index(Post, paginate) + scoped_index(Gallery, paginate))
+      sorted = content.sort_by(&:created_at).reverse
       return  sorted.last(count) if count
       sorted
     end
