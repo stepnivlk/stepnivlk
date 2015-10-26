@@ -32,7 +32,7 @@ module ApplicationHelper
     # e.g. [link text](model|id)
     def parse_model_link(link)
       # Match "Model|ID"
-      matches = link.match(/^([\w\.]+)(?:\:(\d+))?$/)
+      matches = link.match(/^([\w\.]+)(?:\|(\d+))?$/)
       { model: matches[1], id: matches[2] } if matches
     end
 
@@ -62,7 +62,8 @@ module ApplicationHelper
     # title   - Title of given link.
     # content - Description of given link.
     def link(link, title, content)
-      if parse = parse_model_link(link)
+      css_class = nil
+      if (parse = parse_model_link(link)) != nil
         case parse[:model].singularize.downcase
         when "post"
           link_to(content, Rails.application.routes.url_helpers.post_path(parse[:id].to_i))
@@ -71,6 +72,8 @@ module ApplicationHelper
         when "user"
           link_to(content, Rails.application.routes.url_helpers.user_path(parse[:id].to_i))
         end
+      else
+        link_to(content, link, title: title, class: css_class)
       end
     end
   end
