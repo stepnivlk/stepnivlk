@@ -89,9 +89,11 @@
       </div>
     </div>
 
-    <div class="row stream">
-      <%= render partial: 'shared/stream', collection: @streams %>
-    </div><!-- .row -->
+    <div class="stream-wrap">
+      <div class="row stream">
+        <%= render partial: 'shared/stream', collection: @streams %>
+      </div><!-- .row -->
+    </div>
     
   </div><!-- .container -->
 </section>
@@ -178,7 +180,7 @@
             <p>Grafika a fotky jsou moje práce. Ikony a logo jsem vytvořil v editoru <%= link_to "Inkscape", "https://inkscape.org", target: "_blank" %>.
             </p>
             <p>
-              Veškerý kód je licencován pod open-source licencí <%= link_to "GPLv3", "http://www.gnu.org/copyleft/gpl.html", target: "_blank" %> a je k dispozici na <%= link_to "GitHubu", "https://github.com/stepnivlk/stepnivlk", target: "_blank" %>.
+              Veškerý kód je licencován pod open-source licencí MIT a je k dispozici na <%= link_to "GitHubu", "https://github.com/stepnivlk/stepnivlk", target: "_blank" %>.
             </p>
           </div>
         </div>

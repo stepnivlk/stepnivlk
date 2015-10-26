@@ -33,7 +33,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @images = @gallery.images.paginate(page: params[:page], per_page: 25)
+    @images = @gallery.images.order("created_at ASC").paginate(page: params[:page], per_page: 25)
     store_location
     unless @gallery.public
       correct_user
