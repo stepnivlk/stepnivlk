@@ -18,7 +18,7 @@ class HomeController < ApplicationController
 
   # stream, full mix of all content.
   def stream
-    @streams = content_sorted(nil, true)
+    @streams = content_sorted.paginate(page: params[:page], per_page: 25)
   end
 
   private
@@ -27,7 +27,7 @@ class HomeController < ApplicationController
     #
     # count - No. of returned objects, nill=all.
     def content_sorted(count=nil, paginate=true)
-      sorted = (scoped_index(Post, paginate) + scoped_index(Gallery, paginate)).sort_by(&:created_at).reverse
+      sorted = (scoped_index(Post, paginate)).sort_by(&:created_at).reverse
       return  sorted.last(count) if count
       sorted
     end
