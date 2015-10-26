@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   def index
     # content stream for recent activity.
-    @streams = content_sorted(8)
+    @streams = content_sorted(8, false)
     # user used for infoboxes
     @user = User.find_by(email: "tomas@stepnivlk.net")
     @simple_user_infos = @user.simple_user_infos
@@ -18,7 +18,7 @@ class HomeController < ApplicationController
 
   # stream, full mix of all content.
   def stream
-    @streams = content_sorted.paginate(page: params[:page], per_page: 25)
+    @streams = content_sorted(nil, true)
   end
 
   private
@@ -26,8 +26,8 @@ class HomeController < ApplicationController
     # Returns sorted mix of n Posts and Galleries.
     #
     # count - No. of returned objects, nill=all.
-    def content_sorted(count=nil)
-      sorted = (scoped_index(Post, false) + scoped_index(Gallery, false)).sort_by(&:created_at).reverse
+    def content_sorted(count=nil, paginate=true)
+      sorted = (scoped_index(Post, paginate) + scoped_index(Gallery, paginate)).sort_by(&:created_at).reverse
       return  sorted.last(count) if count
       sorted
     end

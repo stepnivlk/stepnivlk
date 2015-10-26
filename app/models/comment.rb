@@ -3,6 +3,6 @@ class Comment < ActiveRecord::Base
 
   validates :author, presence: true, length: { in: 3..50 }
 
-  validates :body, presence: true, length: { in: 10..1000 }
+  validates :body, presence: true, length: { in: 10..2000 }
 
 end
