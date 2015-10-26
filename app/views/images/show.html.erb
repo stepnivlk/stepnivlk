@@ -46,9 +46,9 @@
         <div class="row ">
           <div class="col-sm-12 text-center">
             <% if @image.next %>
-              <%= link_to image_tag(@image.file.url(:medium)), gallery_image_path(@image.gallery_id, @image.next) %>
+              <%= link_to image_tag(@image.file.url(:original)), gallery_image_path(@image.gallery_id, @image.next) %>
             <% else %>
-              <%= image_tag(@image.file.url(:medium)) %>
+              <%= image_tag(@image.file.url(:original)) %>
             <% end %>
             </div>
           </div>
