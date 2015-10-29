@@ -2,12 +2,8 @@
 
 one:
   name: MyString
-  file: 
   file_meta: MyText
-  post_id: 
 
 two:
   name: MyString
-  file: 
   file_meta: MyText
-  post_id: 

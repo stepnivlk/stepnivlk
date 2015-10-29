@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     # content stream for recent activity.
     @streams = (Post.where(public: true).last(4) + Gallery.where(public: true).last(4)).sort_by(&:created_at).reverse
     # user used for infoboxes
-    @user = User.find_by(email: "tomas@stepnivlk.net")
+    @user = User.find(1)
     @simple_user_infos = @user.simple_user_infos
     @skills = @user.skills.order("in_love_index DESC")
     @educations = @user.educations
