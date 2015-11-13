@@ -69,6 +69,7 @@ class User < ActiveRecord::Base
     else
       age = Date.today.year - birth_date.year
       age -= 1 if Date.today < birth_date + age.years
+      age
     end
   end
 end
